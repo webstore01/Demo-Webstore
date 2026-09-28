@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStore Inc. - Online Shopping</title>
+    <!-- Amazon Ember Font Fallback -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+  <!-- Top Header Bar -->
+<header>
+    <div class="top-bar">
+        <span>E-MAIL: franklyn@lpteam.online</span>
+        <span>Phone: +13023022233</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img 
+                src="images/logo.png" 
+                alt="WEBSTORE INC. Logo" 
+                class="site-logo"
+            >
+        </a>
+        
+        <div class="nav-links">
+            <a href="shop.html"class="active">SHOP</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+
+        <!-- All 4 Icons Wrapped Together inside .nav-icons -->
+        <div class="nav-icons">
+            <a href="cart.html" aria-label="View Cart"><i class="far fa-cart"></i></a>
+            <!-- Mini Cart Container -->
+            <div class="cart-wrapper" id="cartWrapper">
+                <div class="cart-trigger" id="cartTrigger">
+                    <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+                    <div class="cart-icon-box">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+
+                <div class="mini-cart-dropdown" id="miniCartDropdown">
+                    <div class="mini-cart-items" id="miniCartItems">
+                        <p class="empty-msg">Your cart is empty.</p>
+                    </div>
+                    
+                    <div class="mini-cart-footer" id="miniCartFooter" style="display: none;">
+                        <div class="subtotal-row">
+                            <span>SUBTOTAL:</span>
+                            <span id="miniCartSubtotal">$0.00</span>
+                        </div>
+                        <div class="mini-cart-actions">
+                            <a href="cart.html" class="btn-mini-cart">
+                                VIEW CART
+                            </a>
+                            <a href="checkout.html" class="btn-mini-cart">
+                                CHECKOUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Nav Icons -->
+            <a href="wishlist.html" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+            <a href="account.html" aria-label="Account"><i class="far fa-user"></i></a>
+
+            <!-- Search Toggle Button (Inside .nav-icons) -->
+            <button type="button" id="headerSearchToggle" class="nav-search-trigger" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+    <div id="searchOverlayBar" class="search-overlay-bar hidden">
+    <div class="search-overlay-inner">
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="productSearchInput" 
+                placeholder="Search Products" 
+                autocomplete="off"
+            />
+            <button type="button" id="productSearchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <button type="button" id="closeSearchBtn" class="close-search-btn" aria-label="Close Search">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+
+  <!-- Main Shop Layout -->
+  <main class="shop-container">
+    
+    <!-- Sidebar Controls -->
+    <aside class="sidebar">
+      <div class="search-box">
+        <input type="text" id="product-search" placeholder="Search products..." />
+        <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+
+      <div class="categories-list">
+        <div class="category-item active" data-cat="all">
+          <span><i class="fa-solid fa-border-all"></i> All Products</span>
+        </div>
+        <div class="category-item" data-cat="auto">
+          <span><i class="fa-solid fa-car"></i> Auto & Tires</span>
+        </div>
+        <div class="category-item" data-cat="clothing">
+          <span><i class="fa-solid fa-shirt"></i> Clothing</span>
+        </div>
+        <div class="category-item" data-cat="electronics">
+          <span><i class="fa-solid fa-laptop"></i> Electronics</span>
+        </div>
+        <div class="category-item" data-cat="home">
+          <span><i class="fa-solid fa-house"></i> Home</span>
+        </div>
+        <div class="category-item" data-cat="industrial">
+          <span><i class="fa-solid fa-flask"></i> Industrial & Scientific</span>
+        </div>
+        <div class="category-item" data-cat="office">
+          <span><i class="fa-solid fa-clipboard"></i> Office Supplies</span>
+        </div>
+        <div class="category-item" data-cat="patio">
+          <span><i class="fa-solid fa-seedling"></i> Patio & Garden</span>
+        </div>
+        <div class="category-item" data-cat="personal">
+          <span><i class="fa-solid fa-pump-soap"></i> Personal Care</span>
+        </div>
+        <div class="category-item" data-cat="sports">
+          <span><i class="fa-solid fa-bowling-ball"></i> Sports & Outdoors</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Products Content Area -->
+    <section class="products-area">
+      <div class="shop-toolbar">
+        <div class="results-count" id="results-count">SHOWING 1–20 OF 100 RESULTS</div>
+        <div class="sort-wrapper">
+          <select id="sort-select">
+            <option value="shuffle">Shuffle</option>
+            <option value="low-high">Price: Low to High</option>
+            <option value="high-low">Price: High to Low</option>
+            <option value="newest">New Arrivals</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Dynamic Product Grid -->
+      <div class="product-grid" id="product-grid">
+        <!-- Javascript populates products here -->
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">4</button>
+        <span class="dots">...</span>
+        <button class="page-btn">10</button>
+        <button class="next-btn">NEXT <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn" class="scroll-top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="careers.html">Careers</a>
+                <a href="refund-returns-policy.html">Refund & Returns Policy</a>
+                <a href="shipping-delivery.html">Shipping & Delivery</a>
+            </div>
+            <div class="footer-info">
+                <h3>WebStore Inc</h3>
+                <p>13 Marlin Ct, New Castle, DE 19720 USA</p>
+                <p>+13023022233</p>
+                <p>franklyn@lpteam.online</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2000 WebStore INC | <a href="terms-and-conditions.html">Terms & Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/cart.js"></script>
+    
+</body>
+</html>

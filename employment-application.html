@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Employment Application Form
+    </title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Application CSS -->
+    <link
+        rel="stylesheet"
+        href="css/employment-application.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="application-page">
+
+
+    <!-- =====================================================
+         FORM HEADER
+    ====================================================== -->
+
+    <header class="application-header">
+
+        <div class="brand-area">
+
+            <img
+                src="images/logo.png"
+                alt="WebStore Inc. Logo"
+                class="application-logo"
+            >
+
+
+        </div>
+
+
+        <h1>
+            Employment Application Form
+        </h1>
+
+    </header>
+
+
+
+    <form
+        id="employmentForm"
+        novalidate
+    >
+
+
+        <!-- =================================================
+             PERSONAL INFORMATION
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+                Personal Information:
+            </div>
+
+
+            <div class="section-content">
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-row">
+
+                    <label class="form-label">
+                        Full Name
+                        <span class="required">*</span>
+                    </label>
+
+
+                    <div class="field-area name-fields">
+
+                        <div class="small-field">
+
+                            <input
+                                type="text"
+                                name="firstName"
+                                required
+                            >
+
+                            <span class="field-help">
+                                First Name
+                            </span>
+
+                        </div>
+
+
+                        <div class="small-field">
+
+                            <input
+                                type="text"
+                                name="lastName"
+                                required
+                            >
+
+                            <span class="field-help">
+                                Last Name
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ADDRESS -->
+
+                <div class="form-row">
+
+                    <label class="form-label">
+                        Address
+                        <span class="required">*</span>
+                    </label>
+
+
+                    <div class="field-area address-fields">
+
+                        <div class="full-field">
+
+                            <input
+                                type="text"
+                                name="address"
+                                required
+                            >
+
+                            <span class="field-help">
+                                Address
+                            </span>
+
+                        </div>
+
+
+                        <div class="two-column-fields">
+
+                            <div class="small-field">
+
+                                <input
+                                    type="text"
+                                    name="city"
+                                    required
+                                >
+
+                                <span class="field-help">
+                                    City
+                                </span>
+
+                            </div>
+
+
+                            <div class="small-field">
+
+                                <select
+                                    name="country"
+                                    required
+                                >
+
+                                    <option value=""></option>
+
+                                    <option>
+                                        United States
+                                    </option>
+
+                                    <option>
+                                        India
+                                    </option>
+
+                                    <option>
+                                        Canada
+                                    </option>
+
+                                    <option>
+                                        United Kingdom
+                                    </option>
+
+                                    <option>
+                                        Australia
+                                    </option>
+
+                                    <option>
+                                        Other
+                                    </option>
+
+                                </select>
+
+                                <span class="field-help">
+                                    Country
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="two-column-fields">
+
+                            <div class="small-field">
+
+                                <input
+                                    type="text"
+                                    name="postalCode"
+                                >
+
+                                <span class="field-help">
+                                    Postal / Zip Code
+                                </span>
+
+                            </div>
+
+
+                            <div class="small-field">
+
+                                <input
+                                    type="text"
+                                    name="state"
+                                >
+
+                                <span class="field-help">
+                                    State / Province
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HOME PHONE -->
+
+                <div class="form-row">
+
+                    <label class="form-label">
+                        Home Phone
+                        <span class="required">*</span>
+                    </label>
+
+
+                    <div class="field-area phone-fields">
+
+                        <div class="phone-area">
+
+                            <input
+                                type="text"
+                                name="homeAreaCode"
+                                maxlength="5"
+                                required
+                            >
+
+                            <span class="field-help">
+                                Area Code
+                            </span>
+
+                        </div>
+
+
+                        <span class="phone-dash">
+                            -
+                        </span>
+
+
+                        <div class="phone-number">
+
+                            <input
+                                type="text"
+                                name="homePhone"
+                                maxlength="15"
+                                required
+                            >
+
+                            <span class="field-help">
+                                Phone Number
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CELL PHONE -->
+
+                <div class="form-row">
+
+                    <label class="form-label">
+                        Cell Phone
+                        <span class="required">*</span>
+                    </label>
+
+
+                    <div class="field-area">
+
+                        <input
+                            type="tel"
+                            name="cellPhone"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-row">
+
+                    <label class="form-label">
+                        E-mail
+                        <span class="required">*</span>
+                    </label>
+
+
+                    <div class="field-area">
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="ex: myname@example.com"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BIRTH DATE -->
+
+                <div class="form-row">
+
+                    <label class="form-label">
+                        Birth Date
+                        <span class="required">*</span>
+                    </label>
+
+
+                    <div class="field-area date-fields">
+
+                        <div class="date-field">
+
+                            <select
+                                id="birthMonth"
+                                name="birthMonth"
+                                required
+                            >
+                                <option value=""></option>
+                            </select>
+
+                            <span class="field-help">
+                                Month
+                            </span>
+
+                        </div>
+
+
+                        <div class="date-field day-field">
+
+                            <select
+                                id="birthDay"
+                                name="birthDay"
+                                required
+                            >
+                                <option value=""></option>
+                            </select>
+
+                            <span class="field-help">
+                                Day
+                            </span>
+
+                        </div>
+
+
+                        <div class="date-field">
+
+                            <select
+                                id="birthYear"
+                                name="birthYear"
+                                required
+                            >
+                                <option value=""></option>
+                            </select>
+
+                            <span class="field-help">
+                                Year
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CITIZEN -->
+
+                <div class="form-row citizen-row">
+
+                    <label class="form-label citizen-label">
+                        Are You a U.S.<br>
+                        Citizen?
+                        <span class="required">*</span>
+                    </label>
+
+
+                    <div class="choice-area">
+
+                        <label class="checkbox-choice">
+
+                            <input
+                                type="radio"
+                                name="citizen"
+                                value="Yes"
+                                required
+                            >
+
+                            <span>
+                                Yes
+                            </span>
+
+                        </label>
+
+
+                        <label class="checkbox-choice">
+
+                            <input
+                                type="radio"
+                                name="citizen"
+                                value="No"
+                            >
+
+                            <span>
+                                No
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EMPLOYMENT DESIRED
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+                Employment Desired:
+            </div>
+
+
+            <div class="section-content">
+
+
+                <div class="employment-top-row">
+
+
+                    <!-- POSITION -->
+
+                    <div class="employment-position">
+
+                        <label>
+                            Position Applying For
+                            <span class="required">*</span>
+                        </label>
+
+
+                        <select
+                            name="position"
+                            required
+                        >
+
+                            <option value=""></option>
+
+                            <option>
+                                Shipping Coordinator
+                            </option>
+
+                            <option>
+                                Warehouse Coordinator
+                            </option>
+
+                            <option>
+                                Logistics Coordinator
+                            </option>
+
+                            <option>
+                                Customer Service Representative
+                            </option>
+
+                            <option>
+                                Administrative Assistant
+                            </option>
+
+                            <option>
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- START DATE -->
+
+                    <div class="start-date-area">
+
+                        <label>
+                            Date You Can Start
+                            <span class="required">*</span>
+                        </label>
+
+
+                        <div class="date-fields">
+
+                            <div class="date-field">
+
+                                <select
+                                    id="startMonth"
+                                    name="startMonth"
+                                    required
+                                >
+                                    <option value=""></option>
+                                </select>
+
+                                <span class="field-help">
+                                    Month
+                                </span>
+
+                            </div>
+
+
+                            <span class="date-dash">
+                                -
+                            </span>
+
+
+                            <div class="date-field day-field">
+
+                                <select
+                                    id="startDay"
+                                    name="startDay"
+                                    required
+                                >
+                                    <option value=""></option>
+                                </select>
+
+                                <span class="field-help">
+                                    Day
+                                </span>
+
+                            </div>
+
+
+                            <span class="date-dash">
+                                -
+                            </span>
+
+
+                            <div class="date-field year-field">
+
+                                <select
+                                    id="startYear"
+                                    name="startYear"
+                                    required
+                                >
+                                    <option value=""></option>
+                                </select>
+
+                                <span class="field-help">
+                                    Year
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SALARY -->
+
+                <div class="salary-row">
+
+                    <label>
+                        Salary Desired
+                    </label>
+
+                    <input
+                        type="text"
+                        name="salaryDesired"
+                    >
+
+                </div>
+
+
+
+                <!-- QUESTIONS -->
+
+                <div class="questions-row">
+
+
+                    <div class="question-block">
+
+                        <label>
+                            Have you ever been convicted of a crime?
+                            <span class="required">*</span>
+                        </label>
+
+
+                        <label class="radio-choice">
+
+                            <input
+                                type="radio"
+                                name="crime"
+                                value="Yes"
+                                required
+                            >
+
+                            <span>
+                                Yes
+                            </span>
+
+                        </label>
+
+
+                        <label class="radio-choice">
+
+                            <input
+                                type="radio"
+                                name="crime"
+                                value="No"
+                            >
+
+                            <span>
+                                No
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <div class="question-block">
+
+                        <label>
+                            Have You Applied Here Before?
+                        </label>
+
+
+                        <label class="radio-choice">
+
+                            <input
+                                type="radio"
+                                name="appliedBefore"
+                                value="Yes"
+                            >
+
+                            <span>
+                                Yes
+                            </span>
+
+                        </label>
+
+
+                        <label class="radio-choice">
+
+                            <input
+                                type="radio"
+                                name="appliedBefore"
+                                value="No"
+                            >
+
+                            <span>
+                                No
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EDUCATION
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+                Education:
+            </div>
+
+
+            <div class="section-content education-content">
+
+
+                <!-- HIGH SCHOOL -->
+
+                <div class="education-block">
+
+                    <div class="education-main">
+
+
+                        <label>
+                            High School
+                        </label>
+
+
+                        <input
+                            type="text"
+                            name="highSchool"
+                        >
+
+
+                        <span class="field-help">
+                            Name of High School Attended
+                        </span>
+
+                    </div>
+
+
+                    <div class="education-side">
+
+                        <label>
+                            Number of Years Attended
+                        </label>
+
+
+                        <input
+                            type="number"
+                            name="highSchoolYears"
+                            min="0"
+                            max="20"
+                        >
+
+
+                        <label class="graduated-label">
+                            Graduated?
+                        </label>
+
+
+                        <label class="check-option">
+
+                            <input
+                                type="checkbox"
+                                name="highSchoolGraduated"
+                            >
+
+                            <span>
+                                Yes
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- COLLEGE -->
+
+                <div class="education-block">
+
+                    <div class="education-main">
+
+
+                        <label>
+                            College
+                        </label>
+
+
+                        <input
+                            type="text"
+                            name="college"
+                        >
+
+
+                        <span class="field-help">
+                            Name of College/University Attended
+                        </span>
+
+
+                        <div class="degree-row">
+
+                            <label>
+                                Area of<br>
+                                Study/Degree
+                            </label>
+
+
+                            <input
+                                type="text"
+                                name="collegeDegree"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="education-side">
+
+                        <label>
+                            Number of Years Attended
+                        </label>
+
+
+                        <input
+                            type="number"
+                            name="collegeYears"
+                            min="0"
+                            max="20"
+                        >
+
+
+                        <label class="graduated-label">
+                            Graduated?
+                        </label>
+
+
+                        <label class="check-option">
+
+                            <input
+                                type="checkbox"
+                                name="collegeGraduated"
+                            >
+
+                            <span>
+                                Yes
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GRADUATE SCHOOL -->
+
+                <div class="education-block">
+
+                    <div class="education-main">
+
+
+                        <label>
+                            Graduate School
+                        </label>
+
+
+                        <input
+                            type="text"
+                            name="graduateSchool"
+                        >
+
+
+                        <span class="field-help">
+                            Name of Graduate School Attended
+                        </span>
+
+
+                        <div class="degree-row">
+
+                            <label>
+                                Area of<br>
+                                Study/Degree
+                            </label>
+
+
+                            <input
+                                type="text"
+                                name="graduateDegree"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="education-side">
+
+                        <label>
+                            Number of Years Attended
+                        </label>
+
+
+                        <input
+                            type="number"
+                            name="graduateYears"
+                            min="0"
+                            max="20"
+                        >
+
+
+                        <label class="graduated-label">
+                            Graduated?
+                        </label>
+
+
+                        <label class="check-option">
+
+                            <input
+                                type="checkbox"
+                                name="graduateGraduated"
+                            >
+
+                            <span>
+                                Yes
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TRADE SCHOOL -->
+
+                <div class="education-block">
+
+                    <div class="education-main">
+
+
+                        <label>
+                            Trade School/Other
+                        </label>
+
+
+                        <input
+                            type="text"
+                            name="tradeSchool"
+                        >
+
+
+                        <span class="field-help">
+                            Name of Trade/Technical/Other School Attended
+                        </span>
+
+
+                        <div class="degree-row">
+
+                            <label>
+                                Area of<br>
+                                Study/Degree
+                            </label>
+
+
+                            <input
+                                type="text"
+                                name="tradeDegree"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="education-side">
+
+                        <label>
+                            Number of Years Attended
+                        </label>
+
+
+                        <input
+                            type="number"
+                            name="tradeYears"
+                            min="0"
+                            max="20"
+                        >
+
+
+                        <label class="graduated-label">
+                            Graduated?
+                        </label>
+
+
+                        <label class="check-option">
+
+                            <input
+                                type="checkbox"
+                                name="tradeGraduated"
+                            >
+
+                            <span>
+                                Yes
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SKILLS / QUALIFICATIONS
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+                Skills/Qualifications:
+            </div>
+
+
+            <div class="section-content">
+
+
+                <div class="textarea-field">
+
+                    <label>
+                        Skills
+                    </label>
+
+
+                    <textarea
+                        name="skills"
+                        rows="6"
+                    ></textarea>
+
+
+                    <span class="field-help">
+                        List any relevant skills
+                    </span>
+
+                </div>
+
+
+
+                <div class="textarea-field">
+
+                    <label>
+                        Qualifications
+                    </label>
+
+
+                    <textarea
+                        name="qualifications"
+                        rows="6"
+                    ></textarea>
+
+
+                    <span class="field-help">
+                        List any relevant certifications or qualifications
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CURRENT EMPLOYMENT
+        ================================================== -->
+
+        <section class="form-section">
+
+            <div class="section-heading">
+                Current Employment:
+            </div>
+
+
+            <div class="section-content current-employment">
+
+
+                <!-- CURRENT EMPLOYER -->
+
+                <div class="current-employer">
+
+                    <label>
+                        Current Employer
+                    </label>
+
+
+                    <input
+                        type="text"
+                        name="currentEmployer"
+                    >
+
+
+                    <span class="field-help">
+                        Name of Current Employer or NONE if not Employed
+                    </span>
+
+                </div>
+
+
+
+                <!-- POSITION -->
+
+                <div class="current-position">
+
+                    <label>
+                        Position
+                    </label>
+
+
+                    <input
+                        type="text"
+                        name="currentPosition"
+                    >
+
+                </div>
+
+
+
+                <!-- SALARY / REASON -->
+
+                <div class="salary-reason-row">
+
+
+                    <div>
+
+                        <label>
+                            Salary
+                        </label>
+
+
+                        <input
+                            type="text"
+                            name="currentSalary"
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Reason for Leaving?
+                        </label>
+
+
+                        <input
+                            type="text"
+                            name="reasonLeaving"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- START DATE / CONTACT -->
+
+                <div class="current-date-contact-row">
+
+
+                    <div class="current-start-date">
+
+                        <label>
+                            Start Date
+                        </label>
+
+
+                        <div class="date-fields">
+
+
+                            <div class="date-field">
+
+                                <select
+                                    id="employmentMonth"
+                                    name="employmentMonth"
+                                >
+                                    <option value=""></option>
+                                </select>
+
+                                <span class="field-help">
+                                    Month
+                                </span>
+
+                            </div>
+
+
+                            <span class="date-dash">
+                                -
+                            </span>
+
+
+                            <div class="date-field day-field">
+
+                                <select
+                                    id="employmentDay"
+                                    name="employmentDay"
+                                >
+                                    <option value=""></option>
+                                </select>
+
+                                <span class="field-help">
+                                    Day
+                                </span>
+
+                            </div>
+
+
+                            <span class="date-dash">
+                                -
+                            </span>
+
+
+                            <div class="date-field year-field">
+
+                                <select
+                                    id="employmentYear"
+                                    name="employmentYear"
+                                >
+                                    <option value=""></option>
+                                </select>
+
+                                <span class="field-help">
+                                    Year
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-question">
+
+                        <label>
+                            May We Contact?
+                        </label>
+
+
+                        <label class="radio-choice">
+
+                            <input
+                                type="radio"
+                                name="mayContact"
+                                value="Yes"
+                            >
+
+                            <span>
+                                Yes
+                            </span>
+
+                        </label>
+
+
+                        <label class="radio-choice">
+
+                            <input
+                                type="radio"
+                                name="mayContact"
+                                value="No"
+                            >
+
+                            <span>
+                                No
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="current-phone">
+
+                    <label>
+                        Phone Number
+                    </label>
+
+
+                    <div class="phone-fields">
+
+
+                        <div class="phone-area">
+
+                            <input
+                                type="text"
+                                name="currentAreaCode"
+                                maxlength="5"
+                            >
+
+                            <span class="field-help">
+                                Area Code
+                            </span>
+
+                        </div>
+
+
+                        <span class="phone-dash">
+                            -
+                        </span>
+
+
+                        <div class="phone-number">
+
+                            <input
+                                type="text"
+                                name="currentPhone"
+                                maxlength="15"
+                            >
+
+                            <span class="field-help">
+                                Phone Number
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SEND APPLICATION
+        ================================================== -->
+
+        <section class="form-section send-section">
+
+            <div class="section-heading">
+                Send Application:
+            </div>
+
+
+            <div class="send-content">
+
+                <p>
+                    Please review your information before
+                    submitting your application.
+                </p>
+
+
+                <button
+                    type="submit"
+                    class="submit-button"
+                >
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send Application
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </form>
+
+
+    <!-- =====================================================
+         SUCCESS MESSAGE
+    ====================================================== -->
+
+    <div
+        id="successMessage"
+        class="success-message"
+    >
+
+        <div class="success-icon">
+
+            <i class="fa-solid fa-check"></i>
+
+        </div>
+
+
+        <h2>
+            Application Submitted
+        </h2>
+
+
+        <p>
+            Thank you for submitting your employment
+            application to WebStore Inc.
+        </p>
+
+
+        <button
+            type="button"
+            id="closeSuccess"
+        >
+            Close
+        </button>
+
+    </div>
+
+
+</div>
+
+
+
+<script
+    src="js/employment-application.js"
+></script>
+
+
+</body>
+
+</html>

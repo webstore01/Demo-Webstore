@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping & Delivery - WebStore Inc</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shipping-delivery.css">
+</head>
+<body>
+
+    <!-- Top Utility Bar -->
+    <header>
+    <div class="top-bar">
+        <span>E-MAIL: franklyn@lpteam.online</span>
+        <span>Phone: +13023022233</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img 
+                src="images/logo.png" 
+                alt="WEBSTORE INC. Logo" 
+                class="site-logo"
+            >
+        </a>
+        
+        <div class="nav-links">
+            <a href="shop.html"class="active">SHOP</a>
+            <a href="about.html"class="active">ABOUT US</a>
+            <a href="contact.html"class="active">CONTACT</a>
+        </div>
+
+        <!-- All 4 Icons Wrapped Together inside .nav-icons -->
+        <div class="nav-icons">
+            <!-- Mini Cart Container -->
+            <div class="cart-wrapper" id="cartWrapper">
+                <div class="cart-trigger" id="cartTrigger">
+                    <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+                    <div class="cart-icon-box">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+
+                <div class="mini-cart-dropdown" id="miniCartDropdown">
+                    <div class="mini-cart-items" id="miniCartItems">
+                        <p class="empty-msg">Your cart is empty.</p>
+                    </div>
+                    
+                    <div class="mini-cart-footer" id="miniCartFooter" style="display: none;">
+                        <div class="subtotal-row">
+                            <span>SUBTOTAL:</span>
+                            <span id="miniCartSubtotal">$0.00</span>
+                        </div>
+                        <div class="mini-cart-actions">
+                            <a href="cart.html" class="btn-mini-cart">
+                                VIEW CART
+                            </a>
+                            <a href="checkout.html" class="btn-mini-cart">
+                                CHECKOUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Nav Icons -->
+            <a href="wishlist.html" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+            <a href="account.html" aria-label="Account"><i class="far fa-user"></i></a>
+
+            <!-- Search Toggle Button (Inside .nav-icons) -->
+            <button type="button" id="headerSearchToggle" class="nav-search-trigger" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+    <div id="searchOverlayBar" class="search-overlay-bar hidden">
+    <div class="search-overlay-inner">
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="productSearchInput" 
+                placeholder="Search Products" 
+                autocomplete="off"
+            />
+            <button type="button" id="productSearchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <button type="button" id="closeSearchBtn" class="close-search-btn" aria-label="Close Search">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+
+    <!-- Page Content Area -->
+    <main class="page-wrapper">
+        <div class="policy-card">
+            
+            <p class="intro-p">
+                At WebStore Inc, we aim to deliver your orders quickly and reliably. This Shipping & Delivery Policy explains how we handle shipping, estimated delivery times, and responsibilities for lost or delayed packages.
+            </p>
+
+            <!-- 1. Shipping Methods -->
+            <section class="policy-section">
+                <h2 class="section-title">1. Shipping Methods</h2>
+                <p>We offer several shipping options depending on your location and the items in your order. Available shipping methods will be displayed at checkout, including standard, expedited, and express delivery.</p>
+            </section>
+
+            <!-- 2. Order Processing -->
+            <section class="policy-section">
+                <h2 class="section-title">2. Order Processing</h2>
+                <ul class="policy-list">
+                    <li>Orders are typically processed within <strong>1–3 business days</strong> after payment is confirmed.</li>
+                    <li>Processing time does not include weekends or holidays.</li>
+                    <li>During peak periods or sales events, processing times may be slightly longer.</li>
+                </ul>
+            </section>
+
+            <!-- 3. Estimated Delivery Times -->
+            <section class="policy-section">
+                <h2 class="section-title">3. Estimated Delivery Times</h2>
+                <p>Delivery times vary depending on the shipping method selected and the destination:</p>
+                <ul class="policy-list highlighted-list">
+                    <li><strong>Standard Shipping:</strong> 5–8 business days</li>
+                    <li><strong>Expedited Shipping:</strong> 2–4 business days</li>
+                    <li><strong>Express Shipping:</strong> 1–2 business days</li>
+                </ul>
+                <p>Please note that these are estimated delivery times and are not guaranteed. Delays may occur due to carrier issues, weather conditions, or customs clearance.</p>
+            </section>
+
+            <!-- 4. Shipping Costs -->
+            <section class="policy-section">
+                <h2 class="section-title">4. Shipping Costs</h2>
+                <p>Shipping costs are calculated at checkout based on your order, shipping method, and delivery address. Any applicable taxes or customs fees are your responsibility if shipping internationally.</p>
+            </section>
+
+            <!-- 5. Lost or Damaged Packages -->
+            <section class="policy-section">
+                <h2 class="section-title">5. Lost or Damaged Packages</h2>
+                <ul class="policy-list">
+                    <li>If your order is lost during transit, please contact our support team immediately.</li>
+                    <li>If you receive a damaged or defective item, report it within <strong>7 days</strong> of delivery for a replacement or refund.</li>
+                    <li>We work closely with carriers to resolve shipping issues, but we are not responsible for delays beyond our control.</li>
+                </ul>
+            </section>
+
+            <!-- 6. Contact Us -->
+            <section class="policy-section">
+                <h2 class="section-title">6. Contact Us</h2>
+                <p>If you have any questions or concerns regarding shipping and delivery, please contact us at <a href="mailto:franklyn@lpteam.online" class="policy-link">franklyn@lpteam.online</a>. Our support team will assist you promptly.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTop" class="scroll-top-btn" title="Back to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="careers.html">Careers</a>
+                <a href="refund-returns-policy.html">Refund & Returns Policy</a>
+                <a href="shipping-delivery.html">Shipping & Delivery</a>
+            </div>
+            <div class="footer-info">
+                <h3>WebStore Inc</h3>
+                <p>13 Marlin Ct, New Castle, DE 19720 USA</p>
+                <p>+13023022233</p>
+                <p>franklyn@lpteam.online</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2000 WebStore INC | <a href="terms-and-conditions.html">Terms & Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1066 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--amazon-light-bg);
+    color: var(--text-color);
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--amazon-dark);
+    color: var(--white);
+    padding: 8px 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    font-size: 13px;
+}
+
+
+/* Header Navbar */
+.navbar {
+    background-color: var(--amazon-navy);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.logo h2 {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--amazon-orange);
+}
+
+.site-logo {
+    max-height: 60px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-links a.active, 
+.nav-links a:hover {
+    background-color: var(--amazon-orange);
+    color: var(--amazon-dark);
+}
+
+/* ==========================================================================
+   HEADER CART & MINI-CART DROPDOWN
+   ========================================================================== */
+
+.nav-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+/* =========================================================
+   HEADER WISHLIST + ACCOUNT ICONS
+   ========================================================= */
+
+.nav-icons > a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 1;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-icons > a:visited {
+    color: #ffffff;
+}
+
+.nav-icons > a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-icons > a i {
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.nav-icons > a:hover i {
+    color: #ffffff;
+}
+
+.cart-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.cart-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.cart-total-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.cart-icon-box {
+    position: relative;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+
+    width: 18px;
+    height: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 60%;
+
+    background-color: #ffffff;
+    color: #2b323d;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* ==========================================================================
+   MINI CART - FIXED VERSION
+   ========================================================================== */
+
+.mini-cart-dropdown {
+
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+
+    right: 0;
+
+    width: 390px;
+
+    max-width: calc(100vw - 30px);
+
+    background-color: #2b323d;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+
+    padding: 16px;
+
+    z-index: 99999;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   SHOW MINI CART
+   ========================================================= */
+
+.cart-wrapper:hover .mini-cart-dropdown,
+.cart-wrapper:focus-within .mini-cart-dropdown,
+.mini-cart-dropdown.active {
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   MINI CART ITEMS CONTAINER
+   ========================================================= */
+
+.mini-cart-items {
+
+    max-height: 290px;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding-right: 4px;
+
+}
+
+
+/* =========================================================
+   MINI CART SCROLLBAR
+   ========================================================= */
+
+.mini-cart-items::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+.mini-cart-items::-webkit-scrollbar-track {
+
+    background: #202630;
+
+    border-radius: 10px;
+
+}
+
+.mini-cart-items::-webkit-scrollbar-thumb {
+
+    background: #8b8f96;
+
+    border-radius: 10px;
+
+}
+
+.mini-cart-items::-webkit-scrollbar-thumb:hover {
+
+    background: #b0b4ba;
+
+}
+
+
+/* Firefox */
+
+.mini-cart-items {
+
+    scrollbar-width: thin;
+
+    scrollbar-color: #8b8f96 #202630;
+
+}
+
+
+/* =========================================================
+   MINI CART ITEM
+   ========================================================= */
+
+.mini-cart-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    width: 100%;
+
+    padding: 12px 0 16px 0;
+
+    margin-bottom: 12px;
+
+    border-bottom:
+        1px dashed rgba(255, 255, 255, 0.18);
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================================================
+   MINI CART PRODUCT IMAGE
+   ========================================================= */
+
+.mini-cart-img {
+
+    width: 55px;
+
+    height: 55px;
+
+    flex: 0 0 66px;
+
+    object-fit: contain;
+
+    border-radius: 7px;
+
+    background-color: #ffffff;
+
+    display: block;
+
+}
+
+
+.mini-cart-product-info,
+.mini-cart-info {
+
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    width: auto;
+
+}
+
+
+/* =========================================================
+   PRODUCT NAME
+   ========================================================= */
+
+.mini-cart-title {
+
+    margin: 0 0 7px 0;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+
+    word-break: normal;
+
+}
+
+
+/* =========================================================
+   PRODUCT PRICE / QUANTITY
+   ========================================================= */
+
+.mini-cart-price {
+
+    margin: 0;
+
+    color: #d0d5dd;
+
+    font-size: 13px;
+
+    font-weight: 400;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================================================
+   DELETE BUTTON
+   ========================================================= */
+
+.mini-cart-remove {
+
+    flex: 0 0 34px;
+
+    width: 34px;
+
+    min-width: 34px;
+
+    height: 34px;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: transparent;
+
+    border: none;
+
+    color: #a0aab8;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    border-radius: 5px;
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+/* Delete icon hover */
+
+.mini-cart-remove:hover {
+
+    color: #ffffff;
+
+    background-color: #c62828;
+
+    transform: scale(1.05);
+
+}
+
+
+/* Make sure the icon itself does not block the click */
+
+.mini-cart-remove i {
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   EMPTY CART
+   ========================================================= */
+
+.empty-msg {
+
+    margin: 20px 0;
+
+    color: #a0aab8;
+
+    text-align: center;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   SUBTOTAL
+   ========================================================= */
+
+.subtotal-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 0;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.12);
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================================================
+   MINI CART BUTTONS
+   ========================================================= */
+
+.mini-cart-actions {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 8px;
+
+    width: 100%;
+
+}
+
+
+/* VIEW CART + CHECKOUT */
+
+.mini-cart-actions .btn-mini-cart,
+.mini-cart-actions .btn-mini-checkout {
+
+    flex: 1 1 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: auto;
+
+    min-width: 0;
+
+    min-height: 48px;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #FF9900;
+
+    color: #0F1111;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+   ========================================================= */
+
+.mini-cart-actions .btn-mini-cart:hover,
+.mini-cart-actions .btn-mini-checkout:hover {
+
+    background-color: #FEBD69;
+
+    color: #0F1111;
+
+    text-decoration: none;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   BUTTON CLICK
+   ========================================================= */
+
+.mini-cart-actions .btn-mini-cart:active,
+.mini-cart-actions .btn-mini-checkout:active {
+
+    transform: translateY(0);
+
+}
+
+
+
+.cart-wrapper {
+
+    position: relative;
+
+    display: inline-block;
+
+    padding: 5px 0 12px 0;
+
+    margin-bottom: -12px;
+
+}
+
+
+/* =========================================================
+   MINI CART MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .mini-cart-dropdown {
+
+        width: 350px;
+
+        max-width: calc(100vw - 20px);
+
+        padding: 14px;
+
+    }
+
+
+    .mini-cart-items {
+
+        max-height: 260px;
+
+    }
+
+
+    .mini-cart-item {
+
+        gap: 10px;
+
+    }
+
+
+    .mini-cart-img {
+
+        width: 58px;
+
+        height: 58px;
+
+        flex-basis: 58px;
+
+    }
+
+
+    .mini-cart-title {
+
+        font-size: 15px;
+
+    }
+
+
+    .mini-cart-price {
+
+        font-size: 14px;
+
+    }
+
+
+    .mini-cart-remove {
+
+        flex-basis: 32px;
+
+        width: 32px;
+
+        min-width: 32px;
+
+        height: 32px;
+
+        font-size: 15px;
+
+    }
+
+
+    .subtotal-row {
+
+        font-size: 16px;
+
+    }
+
+
+    .mini-cart-actions {
+
+        gap: 8px;
+
+    }
+
+
+    .mini-cart-actions .btn-mini-cart,
+    .mini-cart-actions .btn-mini-checkout {
+
+        min-height: 50px;
+
+        padding: 0 10px;
+
+        font-size: 14px;
+
+    }
+
+}
+
+/* Header Search Toggle Button */
+.nav-search-trigger {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0; /* Ensures no extra spacing is applied */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.nav-search-trigger:hover {
+    color: #febd69; /* Amazon Accent Orange */
+}
+
+/* Toggleable Search Bar Panel */
+.search-overlay-bar {
+    width: 100%;
+    background-color: #131921; /* Amazon Dark Navy Theme */
+    border-bottom: 1px solid #3a4553;
+    padding: 25px 0;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 200px;
+    opacity: 1;
+}
+
+.search-overlay-bar.hidden {
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+    border-bottom: none;
+    pointer-events: none;
+}
+
+.search-overlay-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Minimalist Search Underline Wrapper */
+.search-input-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px solid #3a4553;
+    padding-bottom: 6px;
+    transition: border-color 0.2s ease;
+}
+
+.search-input-wrapper:focus-within {
+    border-bottom-color: #febd69;
+}
+
+#productSearchInput {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: "Amazon Ember", Arial, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    padding-right: 50px;
+}
+
+#productSearchInput::placeholder {
+    color: #8d99ae;
+    font-weight: 300;
+}
+
+/* Circular Search Icon Button */
+#productSearchBtn {
+    position: absolute;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #f4b04f; /* Amazon Teal */
+    border: none;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#productSearchBtn:hover {
+    background-color: #febd69;
+    color: #111111;
+}
+
+#productSearchBtn i {
+    font-size: 1.1rem;
+}
+
+/* Close Button */
+.close-search-btn {
+    background: transparent;
+    border: none;
+    color: #8d99ae;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-search-btn:hover {
+    color: #ffffff;
+}
+
+/* Page Background Base */
+body.account-page-body {
+    background-color: #eaebed; /* Keep overall page body dark navy to match header/footer */
+    color: #0F1111;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Middle Login/Register Light Theme Section */
+.account-container {
+    max-width: 1050px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.account-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    position: relative;
+    background-color: #ffffff; /* Clean light background for login/register box */
+    padding: 45px 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(247, 243, 243, 0.15);
+    border: 1px solid #d5d9d9;
+}
+
+/* Light Separator Divider */
+.account-grid::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    bottom: 40px;
+    width: 1px;
+    background-color: #e7e7e7;
+    transform: translateX(-50%);
+}
+
+.account-box h2 {
+    font-size: 1.8rem;
+    color: #0f1111; /* Dark heading text */
+    margin-bottom: 22px;
+    font-weight: 600;
+}
+
+/* Form Fields & Labels */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #0f1111;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.form-group label span.required {
+    color: #c45d90;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Light Inputs */
+.form-control {
+    width: 100%;
+    padding: 10px 38px 10px 12px;
+    background-color: #ffffff;
+    border: 1px solid #888c8c;
+    border-radius: 4px;
+    color: #0f1111;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgba(228, 121, 17, 0.4);
+}
+
+/* Password Toggle Icon */
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    color: #555555;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.password-toggle:hover {
+    color: #0f1111;
+}
+
+/* Checkbox & Text Options */
+.remember-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+    color: #0f1111;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.remember-checkbox input[type="checkbox"] {
+    accent-color: #febd69;
+    width: 16px;
+    height: 16px;
+}
+
+.register-info {
+    color: #565959;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.register-info a, .lost-password-link {
+    color: #2a72cf;
+    text-decoration: none;
+}
+
+.register-info a:hover, .lost-password-link:hover {
+    color: #1a4f93;
+    text-decoration: underline;
+}
+
+.lost-password-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #2a72cf;
+}
+
+/* Brand Orange Buttons */
+.btn-account {
+    background-color: #febd69;
+    color: #111111;
+    border: 1px solid #a88734;
+    padding: 10px 30px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-account:hover {
+    background-color: #f3a847;
+}
+
+/* Footer Styling (Dark Navy - Preserved) */
+.footer {
+    background: var(--amazon-dark);
+    color: var(--white);
+    padding-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px 30px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #DDD;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: var(--amazon-orange);
+}
+
+.footer-info h3 {
+    color: var(--amazon-orange);
+    margin-bottom: 10px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    color: #DDD;
+    margin-bottom: 5px;
+}
+
+.footer-bottom {
+    background: #0D1117;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    color: #888;
+}
+
+.footer-bottom a {
+    color: #AAA;
+    text-decoration: none;
+}
+
+/* Scroll to Top Floating Button */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--amazon-navy);
+    color: var(--white);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+@media (max-width: 768px) {
+    .faq-card {
+        padding: 30px 20px;
+    }
+    .page-container {
+        padding: 20px 10px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-info {
+        text-align: left;
+    }
+}

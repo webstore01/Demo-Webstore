@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions - WebStore Inc</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom Stylesheet -->
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/terms-and-conditions.css">
+</head>
+<body>
+
+    <!-- Top Utility Bar -->
+    <header>
+    <div class="top-bar">
+        <span>E-MAIL: franklyn@lpteam.online</span>
+        <span>Phone: +13023022233</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img 
+                src="images/logo.png" 
+                alt="WEBSTORE INC. Logo" 
+                class="site-logo"
+            >
+        </a>
+        
+        <div class="nav-links">
+            <a href="shop.html"class="active">SHOP</a>
+            <a href="about.html"class="active">ABOUT US</a>
+            <a href="contact.html"class="active">CONTACT</a>
+        </div>
+
+        <!-- All 4 Icons Wrapped Together inside .nav-icons -->
+        <div class="nav-icons">
+            <!-- Mini Cart Container -->
+            <div class="cart-wrapper" id="cartWrapper">
+                <div class="cart-trigger" id="cartTrigger">
+                    <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+                    <div class="cart-icon-box">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+
+                <div class="mini-cart-dropdown" id="miniCartDropdown">
+                    <div class="mini-cart-items" id="miniCartItems">
+                        <p class="empty-msg">Your cart is empty.</p>
+                    </div>
+                    
+                    <div class="mini-cart-footer" id="miniCartFooter" style="display: none;">
+                        <div class="subtotal-row">
+                            <span>SUBTOTAL:</span>
+                            <span id="miniCartSubtotal">$0.00</span>
+                        </div>
+                        <div class="mini-cart-actions">
+                            <a href="cart.html" class="btn-mini-cart">
+                                VIEW CART
+                            </a>
+                            <a href="checkout.html" class="btn-mini-cart">
+                                CHECKOUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Nav Icons -->
+            <a href="wishlist.html" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+            <a href="account.html" aria-label="Account"><i class="far fa-user"></i></a>
+
+            <!-- Search Toggle Button (Inside .nav-icons) -->
+            <button type="button" id="headerSearchToggle" class="nav-search-trigger" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+    <div id="searchOverlayBar" class="search-overlay-bar hidden">
+    <div class="search-overlay-inner">
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="productSearchInput" 
+                placeholder="Search Products" 
+                autocomplete="off"
+            />
+            <button type="button" id="productSearchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <button type="button" id="closeSearchBtn" class="close-search-btn" aria-label="Close Search">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+    <!-- Page Content Area -->
+    <main class="page-wrapper">
+        <div class="policy-card">
+            
+            <p class="intro-p">
+                Welcome to WebStore Inc! By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.
+            </p>
+
+            <!-- 1. General Information -->
+            <section class="policy-section">
+                <h2 class="section-title">1. General Information</h2>
+                <p>WebStore Inc operates as an online retailer offering a variety of products. By placing an order with us, you agree to these Terms & Conditions.</p>
+            </section>
+
+            <!-- 2. Orders and Payment -->
+            <section class="policy-section">
+                <h2 class="section-title">2. Orders and Payment</h2>
+                <ul class="policy-list">
+                    <li>All orders are subject to product availability.</li>
+                    <li>Payment must be completed at the time of purchase. We accept all major payment methods available at checkout.</li>
+                    <li>Prices and availability of products may change without prior notice.</li>
+                </ul>
+            </section>
+
+            <!-- 3. Shipping and Delivery -->
+            <section class="policy-section">
+                <h2 class="section-title">3. Shipping and Delivery</h2>
+                <ul class="policy-list">
+                    <li>We aim to ship products promptly. Delivery times are estimated and not guaranteed.</li>
+                    <li>Shipping costs are calculated at checkout based on your location and chosen shipping method.</li>
+                    <li>We are not responsible for delays caused by carriers, customs, or unforeseen circumstances.</li>
+                </ul>
+            </section>
+
+            <!-- 4. Returns and Refunds -->
+            <section class="policy-section">
+                <h2 class="section-title">4. Returns and Refunds</h2>
+                <ul class="policy-list">
+                    <li>You may request a return within <strong>30 days</strong> of receiving your order, subject to our Refund & Returns Policy.</li>
+                    <li>Items must be returned in their original condition and packaging.</li>
+                    <li>Refunds will be issued to the original payment method within 7–10 business days after receipt and approval of the returned items.</li>
+                </ul>
+            </section>
+
+            <!-- 5. Product Information -->
+            <section class="policy-section">
+                <h2 class="section-title">5. Product Information</h2>
+                <p>We make every effort to ensure that product descriptions and images are accurate. Minor differences in color, size, or appearance may occur due to display variations or manufacturer specifications.</p>
+            </section>
+
+            <!-- 6. User Conduct -->
+            <section class="policy-section">
+                <h2 class="section-title">6. User Conduct</h2>
+                <ul class="policy-list">
+                    <li>You agree not to misuse our website or services, including posting harmful, misleading, or illegal content.</li>
+                    <li>You agree to provide accurate and complete information when creating an account or placing an order.</li>
+                </ul>
+            </section>
+
+            <!-- 7. Limitation of Liability -->
+            <section class="policy-section">
+                <h2 class="section-title">7. Limitation of Liability</h2>
+                <p>WebStore Inc is not liable for any indirect, incidental, or consequential damages resulting from the use of our products or website. In no event shall our total liability exceed the amount paid for the product in question.</p>
+            </section>
+
+            <!-- 8. Intellectual Property -->
+            <section class="policy-section">
+                <h2 class="section-title">8. Intellectual Property</h2>
+                <p>All content on WebStore Inc, including text, images, logos, and other materials, is owned by WebStore Inc or its licensors. You may not copy, reproduce, distribute, or use any content without our prior written consent.</p>
+            </section>
+
+            <!-- 9. Third-Party Services -->
+            <section class="policy-section">
+                <h2 class="section-title">9. Third-Party Services</h2>
+                <p>Our website may contain links or integrations with third-party services such as payment processors, analytics tools, or email providers. By using these services, you agree to their terms and policies.</p>
+            </section>
+
+            <!-- 10. Contact Information -->
+            <section class="policy-section">
+                <h2 class="section-title">10. Contact Information</h2>
+                <p>For any questions regarding these Terms & Conditions, please contact us at <a href="mailto:franklyn@lpteam.online" class="policy-link">franklyn@lpteam.online</a>.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollToTop" class="scroll-top-btn" title="Back to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="careers.html">Careers</a>
+                <a href="refund-returns-policy.html">Refund & Returns Policy</a>
+                <a href="shipping-delivery.html">Shipping & Delivery</a>
+            </div>
+            <div class="footer-info">
+                <h3>WebStore Inc</h3>
+                <p>13 Marlin Ct, New Castle, DE 19720 USA</p>
+                <p>+13023022233</p>
+                <p>franklyn@lpteam.online</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2000 WebStore INC | <a href="terms-and-conditions.html">Terms & Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

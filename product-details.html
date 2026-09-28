@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Product Details - WebStore Inc</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+
+    <!-- Your existing main style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Product details style -->
+    <link rel="stylesheet" href="css/product-details.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="top-bar">
+        <span>E-MAIL: franklyn@lpteam.online</span>
+        <span>Phone: +13023022233</span>
+    </div>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo-link">
+            <img
+                src="images/logo.png"
+                alt="WEBSTORE INC. Logo"
+                class="site-logo"
+            >
+        </a>
+
+        <div class="nav-links">
+
+            <a href="shop.html" class="active">
+                SHOP
+            </a>
+
+            <a href="about.html">
+                ABOUT US
+            </a>
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+
+        </div>
+
+        <div class="nav-icons">
+
+            <div class="cart-wrapper" id="cartWrapper">
+
+                <div class="cart-trigger">
+
+                    <span
+                        class="cart-total-price"
+                        id="cartTotalPrice"
+                    >
+                        $0.00
+                    </span>
+
+                    <div class="cart-icon-box">
+
+                        <i class="fas fa-shopping-basket"></i>
+
+                        <span
+                            class="cart-badge"
+                            id="cartBadge"
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="mini-cart-dropdown"
+                    id="miniCartDropdown"
+                >
+
+                    <div
+                        class="mini-cart-items"
+                        id="miniCartItems"
+                    >
+                        <p class="empty-msg">
+                            Your cart is empty.
+                        </p>
+                    </div>
+
+                    <div
+                        class="mini-cart-footer"
+                        id="miniCartFooter"
+                        style="display:none;"
+                    >
+
+                        <div class="subtotal-row">
+
+                            <span>
+                                SUBTOTAL:
+                            </span>
+
+                            <span id="miniCartSubtotal">
+                                $0.00
+                            </span>
+
+                        </div>
+
+                        <div class="mini-cart-actions">
+
+                            <a
+                                href="cart.html"
+                                class="btn-mini-cart"
+                            >
+                                VIEW CART
+                            </a>
+
+                            <a
+                                href="checkout.html"
+                                class="btn-mini-checkout"
+                            >
+                                CHECKOUT
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a
+                href="wishlist.html"
+                aria-label="Wishlist"
+            >
+                <i class="far fa-heart"></i>
+            </a>
+
+            <a
+                href="account.html"
+                aria-label="Account"
+            >
+                <i class="far fa-user"></i>
+            </a>
+
+            <a
+                href="shop.html"
+                aria-label="Search"
+            >
+                <i class="fas fa-search"></i>
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     BREADCRUMB
+===================================================== -->
+
+<div class="product-breadcrumb">
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <span>
+        <i class="fas fa-chevron-right"></i>
+    </span>
+
+    <a href="shop.html">
+        Shop
+    </a>
+
+    <span>
+        <i class="fas fa-chevron-right"></i>
+    </span>
+
+    <a
+        id="breadcrumbCategory"
+        href="shop.html"
+    >
+        Category
+    </a>
+
+    <span>
+        <i class="fas fa-chevron-right"></i>
+    </span>
+
+    <span id="breadcrumbProduct">
+        Product
+    </span>
+
+</div>
+
+
+<!-- =====================================================
+     PRODUCT DETAILS
+===================================================== -->
+
+<main class="product-details-container">
+
+    <!-- LEFT IMAGE AREA -->
+
+    <section class="product-gallery">
+
+        <div class="main-product-image">
+
+            <img
+                id="mainProductImage"
+                src="images/logo.png"
+                alt="Product"
+            >
+            <div
+            class="detail-sale"
+            id="detailSale"
+            style="display:none;"
+        >
+            SALE
+        </div>
+
+            <!-- PREVIOUS IMAGE -->
+    <button
+        type="button"
+        class="gallery-arrow gallery-prev"
+        id="galleryPrev"
+        aria-label="Previous image"
+    >
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+
+    <!-- NEXT IMAGE -->
+    <button
+        type="button"
+        class="gallery-arrow gallery-next"
+        id="galleryNext"
+        aria-label="Next image"
+    >
+        <i class="fas fa-arrow-right"></i>
+    </button>
+
+
+    <!-- EXPAND IMAGE -->
+    <button
+        class="image-expand-btn"
+        id="imageExpandBtn"
+        type="button"
+        aria-label="Expand image"
+    >
+        <i class="fas fa-expand"></i>
+    </button>
+
+        </div>
+
+        <div
+            class="product-thumbnails"
+            id="productThumbnails"
+        >
+        </div>
+
+    </section>
+
+
+    <!-- RIGHT INFORMATION AREA -->
+
+    <section class="product-information">
+
+        <button
+            class="detail-wishlist"
+            id="detailWishlist"
+            type="button"
+            title="Add to wishlist"
+        >
+            <i class="far fa-heart"></i>
+        </button>
+
+
+        
+
+
+        <h1 id="productTitle">
+            Product Title
+        </h1>
+
+
+        <div
+            class="detail-price"
+            id="productPrice"
+        >
+            $0.00
+        </div>
+
+
+        <div
+            class="detail-old-price"
+            id="productOldPrice"
+        >
+        </div>
+
+
+        <!-- SHORT PRODUCT DESCRIPTION -->
+
+<p
+    class="product-short-description"
+    id="productShortDescription"
+>
+    Product description will appear here.
+</p>
+
+
+<!-- PRODUCT OPTIONS -->
+<div
+    class="product-options"
+    id="productOptions"
+></div>
+
+
+<hr>
+
+
+        <hr>
+
+
+        <!-- QUANTITY + ADD CART -->
+
+        <div class="purchase-area">
+
+            <div class="quantity-control">
+
+                <button
+                    type="button"
+                    id="quantityMinus"
+                >
+                    −
+                </button>
+
+                <span id="quantityValue">
+                    1
+                </span>
+
+                <button
+                    type="button"
+                    id="quantityPlus"
+                >
+                    +
+                </button>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="detail-add-cart"
+                id="detailAddCart"
+            >
+                Add to cart
+            </button>
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- CATEGORY -->
+
+        <div class="product-category-row">
+
+            <strong>
+                CATEGORIES:
+            </strong>
+
+            <a
+                href="shop.html"
+                id="productCategoryLink"
+            >
+                Category
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =====================================================
+     DESCRIPTION / REVIEWS
+===================================================== -->
+
+<section class="product-tabs">
+
+    <div class="product-tab-buttons">
+
+        <button
+            class="product-tab active"
+            data-tab="description"
+            type="button"
+        >
+            DESCRIPTION
+        </button>
+
+
+        <button
+            class="product-tab"
+            data-tab="reviews"
+            type="button"
+        >
+            REVIEWS (0)
+        </button>
+
+    </div>
+
+
+    <!-- DESCRIPTION TAB -->
+
+    <div
+        class="product-tab-content active"
+        id="descriptionTab"
+    >
+
+        <h3>
+            Product Description
+        </h3>
+
+
+        <div id="fullProductDescription">
+            Product information will appear here.
+        </div>
+
+
+        <h3 class="product-details-heading">
+            Product Details
+        </h3>
+
+
+        <div
+            id="productDetailsTable"
+            class="product-details-table"
+        >
+        </div>
+
+    </div>
+
+
+    <!-- REVIEWS TAB -->
+
+    <div
+        class="product-tab-content"
+        id="reviewsTab"
+    >
+
+        <p>
+            There are no reviews yet.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RELATED PRODUCTS
+===================================================== -->
+
+<section class="related-products-section">
+
+    <h2>
+        Related products
+    </h2>
+
+    <div
+        class="related-products-grid"
+        id="relatedProducts"
+    >
+    </div>
+
+</section>
+
+
+<!-- IMAGE MODAL -->
+
+<div
+    class="image-modal"
+    id="imageModal"
+>
+
+    <button
+        id="closeImageModal"
+        type="button"
+    >
+        <i class="fas fa-times"></i>
+    </button>
+
+    <img
+        id="modalProductImage"
+        src=""
+        alt="Product"
+    >
+    
+
+</div>
+
+
+<!-- SCROLL TOP -->
+
+<button
+    id="scrollTopBtn"
+    class="scroll-top"
+>
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="careers.html">Careers</a>
+                <a href="refund-returns-policy.html">Refund & Returns Policy</a>
+                <a href="shipping-delivery.html">Shipping & Delivery</a>
+            </div>
+            <div class="footer-info">
+                <h3>WebStore Inc</h3>
+                <p>13 Marlin Ct, New Castle, DE 19720 USA</p>
+                <p>+13023022233</p>
+                <p>franklyn@lpteam.online</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2000 WebStore INC | <a href="terms-and-conditions.html">Terms & Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+
+<script src="js/script.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/shop.js"></script>
+
+<!-- IMPORTANT: this comes LAST -->
+<script src="js/product-details.js"></script>
+
+</body>
+</html>

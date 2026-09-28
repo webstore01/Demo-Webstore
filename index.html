@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStore Inc. - Online Shopping</title>
+    <!-- Amazon Ember Font Fallback -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Top Header Bar -->
+<header>
+    <div class="top-bar">
+        <span>E-MAIL: franklyn@lpteam.online</span>
+        <span>Phone: +13023022233</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img 
+                src="images/logo.png" 
+                alt="WEBSTORE INC. Logo" 
+                class="site-logo"
+            >
+        </a>
+        
+        <div class="nav-links">
+            <a href="shop.html"class="active">SHOP</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+
+        <!-- All 4 Icons Wrapped Together inside .nav-icons -->
+        <div class="nav-icons">
+            <a href="cart.html" aria-label="View Cart"><i class="far fa-cart"></i></a>
+            <!-- Mini Cart Container -->
+            <div class="cart-wrapper" id="cartWrapper">
+                <div class="cart-trigger" id="cartTrigger">
+                    <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+                    <div class="cart-icon-box">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+
+                <div class="mini-cart-dropdown" id="miniCartDropdown">
+                    <div class="mini-cart-items" id="miniCartItems">
+                        <p class="empty-msg">Your cart is empty.</p>
+                    </div>
+                    
+                    <div class="mini-cart-footer" id="miniCartFooter" style="display: none;">
+                        <div class="subtotal-row">
+                            <span>SUBTOTAL:</span>
+                            <span id="miniCartSubtotal">$0.00</span>
+                        </div>
+                        <div class="mini-cart-actions">
+                            <a href="cart.html" class="btn-mini-cart">
+                                VIEW CART
+                            </a>
+                            <a href="checkout.html" class="btn-mini-cart">
+                                CHECKOUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Nav Icons -->
+            <a href="wishlist.html" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+            <a href="account.html" aria-label="Account"><i class="far fa-user"></i></a>
+
+            <!-- Search Toggle Button (Inside .nav-icons) -->
+            <button type="button" id="headerSearchToggle" class="nav-search-trigger" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+    <div id="searchOverlayBar" class="search-overlay-bar hidden">
+    <div class="search-overlay-inner">
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="productSearchInput" 
+                placeholder="Search Products" 
+                autocomplete="off"
+            />
+            <button type="button" id="productSearchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <button type="button" id="closeSearchBtn" class="close-search-btn" aria-label="Close Search">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+    <!-- Hero Banner -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Quality products for home, electronics, and everyday life</h1>
+            <p>Carefully selected items designed to make everyday living easier, more comfortable, and more efficient.</p>
+            <a href="shop.html" class="btn-primary">Click Here</a>
+  
+        </div>
+        <div class="hero-image">
+            <!-- IMAGE LINK:
+                 images/hero-bg.jpg
+            -->
+            <img 
+                src="images/hero.png" 
+                alt="Shopping Hero"
+            >
+        </div>
+    </section>
+
+    
+
+    <!-- Categories Section -->
+<section class="categories-section">
+    <!-- Category 1 -->
+    <div class="category-card" data-category="electronics">
+        <!-- IMAGE LINK:
+             images/categories/electronics.jpg
+        -->
+        <img src="images/category-electronics.jpg" alt="Electronics" class="category-bg">
+        <div class="category-overlay">
+            <h3>Electronics</h3>
+            <p>Laptops, Smart Home, Wearable and others</p>
+        </div>
+    </div>
+
+    <!-- Category 2 -->
+    <div class="category-card" data-category="home">
+        <!-- IMAGE LINK:
+             images/categories/home.jpg
+        -->
+        <img src="images/category-home.jpg" alt="Home & Appliances" class="category-bg">
+        <div class="category-overlay">
+            <h3>Home &amp; Appliances</h3>
+            <p>Kitchen gadgets, Furniture and more</p>
+        </div>
+    </div>
+
+    <!-- Category 3 -->
+    <div class="category-card" data-category="clothing">
+        <!-- IMAGE LINK:
+             images/categories/clothing.jpg
+        -->
+        <img src="images/category-clothing.jpg" alt="Clothing" class="category-bg">
+        <div class="category-overlay">
+            <h3>Clothing</h3>
+            <p>Apparel, Shoes and more</p>
+        </div>
+    </div>
+
+    <!-- Category 4 -->
+    <div class="category-card" data-category="auto">
+        <!-- IMAGE LINK:
+             images/categories/auto.jpg
+        -->
+        <img src="images/category-auto.jpg" alt="Auto & Tires" class="category-bg">
+        <div class="category-overlay">
+            <h3>Auto &amp; Tires</h3>
+            <p>Car accessories, Tires, Tools, and more</p>
+        </div>
+    </div>
+
+    <!-- Category 5 -->
+    <div class="category-card" data-category="all">
+        <!-- IMAGE LINK:
+             images/categories/other.jpg
+        -->
+        <img src="images/category-other.jpg" alt="Other" class="category-bg">
+        <div class="category-overlay">
+            <h3>Other</h3>
+            <p>Gifts, Outdoor gear, and other essentials</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Our Favorites Carousel (7 items) -->
+    <section class="carousel-section">
+        <h2>Our Favorites</h2>
+        <div class="carousel-wrapper">
+            <button class="scroll-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-container">
+                <!-- Product 1 -->
+                <div class="product-card" data-id="83">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    
+                    <!-- IMAGE LINK:
+                         images/favorites/fav1.jpg
+                    -->
+                    <img 
+                        src="images/favorite-1.jpg" 
+                        alt="Bose Home Speaker 500"
+                    >
+                    <h4>Bose Home Speaker 500</h4>
+                    <div class="price">$375.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-id="14">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/favorites/fav2.jpg
+                    -->
+                    <img 
+                        src="images/favorite-2.jpg" 
+                        alt="Portable Wireless Apple CarPlay"
+                    >
+                    <h4>Portable Wireless Apple CarPlay</h4>
+                    <div class="price">$150.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-id="85">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/favorites/fav3.jpg
+                    -->
+                    <img 
+                        src="images/favorite-3.jpg" 
+                        alt="Miele Blizzard CX1 Cat & Dog Bagless Canister Vacuum"
+                    >
+                    <h4>Miele Blizzard CX1 Cat & Dog Bagless Canister Vacuum</h4>
+                    <div class="price">$1,200.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-id="91">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/favorites/fav4.jpg
+                    -->
+                    <img 
+                        src="images/favorite-4.jpg" 
+                        alt="Dyson V12 Detect Slim Cordless Vacuum Cleaner, Yellow/Iron"
+                    >
+                    <h4>Dyson V12 Detect Slim Cordless Vacuum Cleaner, Yellow/Iron</h4>
+                    <div class="price">$670.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-id="46">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/favorites/fav5.jpg
+                    -->
+                    <img 
+                        src="images/favorite-5.jpg" 
+                        alt="SAMSUNG T9 Portable SSD 4TB"
+                    >
+                    <h4>SAMSUNG T9 Portable SSD 4TB</h4>
+                    <div class="price">$355.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-id="45">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/favorites/fav6.jpg
+                    -->
+                    <img 
+                        src="images/favorite-6.jpg" 
+                        alt="Amazon Kindle E-Reader"
+                    >
+                    <h4>Amazon Kindle E-Reader</h4>
+                    <div class="price">$100.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-id="72">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/favorites/fav7.jpg
+                    -->
+                    <img 
+                        src="images/favorite-7.jpg" 
+                        alt="SEIKO SRPJ81 Men’s Analog Mechanical Watch"
+                    >
+                    <h4>SEIKO SRPJ81 Men’s Analog Mechanical Watch</h4>
+                    <div class="price">$221.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+            </div>
+            <button class="scroll-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Hot Deals Carousel (7 items) -->
+    <section class="carousel-section">
+        <h2>Hot Deals</h2>
+        <div class="carousel-wrapper">
+            <button class="scroll-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-container">
+                <!-- Deal 1 -->
+                <div class="product-card" data-id="31">
+                    <span class="badge">SALE</span>
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/hot-deals/deal1.jpg
+                    -->
+                    <img 
+                        src="images/deal-1.jpg" 
+                        alt="SITKA Gear Men’s Traverse Hunting Hoody"
+                    >
+                    <h4>SITKA Gear Men’s Traverse Hunting Hoody</h4>
+                    <div class="price">$199.00 – $229.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Deal 2 -->
+                <div class="product-card" data-id="71">
+                    <span class="badge">SALE</span>
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/hot-deals/deal2.jpg
+                    -->
+                    <img 
+                        src="images/deal-2.jpg" 
+                        alt="THE NORTH FACE Wawona 4P Tent Green/Grey"
+                    >
+                    <h4>THE NORTH FACE Wawona 4P Tent Green/Grey</h4>
+                    <div class="price">$400.00 <span class="old-price">$460.00</span></div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Deal 3 -->
+                <div class="product-card" data-id="81">
+                    <span class="badge">SALE</span>
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/hot-deals/deal3.jpg
+                    -->
+                    <img 
+                        src="images/deal-3.jpg" 
+                        alt="SEIKO SRPG27 5 Sports Men’s Watch"
+                    >
+                    <h4>SEIKO SRPG27 5 Sports Men’s Watch</h4>
+                    <div class="price">$225.00 <span class="old-price">$295.00</span></div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Deal 4 -->
+                <div class="product-card" data-id="103">
+                    <span class="badge">SALE</span>
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/hot-deals/deal4.jpg
+                    -->
+                    <img 
+                        src="images/deal-4.jpg" 
+                        alt="THE NORTH FACE Thermoball Lifty II Mens Boots"
+                    >
+                    <h4>THE NORTH FACE Thermoball Lifty II Mens Boots</h4>
+                    <div class="price">$159.00 <span class="old-price">$189.00</span></div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Deal 5 -->
+                <div class="product-card" data-id="22">
+                    <span class="badge">SALE</span>
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/hot-deals/deal5.jpg
+                    -->
+                    <img 
+                        src="images/deal-5.jpg" 
+                        alt="Breville Juice Fountain Plus Juicer"
+                    >
+                    <h4>Breville Juice Fountain Plus Juicer</h4>
+                    <div class="price">$180.00 <span class="old-price">$195.00</span></div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Deal 6 -->
+                <div class="product-card" data-id="42">
+                    <span class="badge">SALE</span>
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/hot-deals/deal6.jpg
+                    -->
+                    <img 
+                        src="images/deal-6.jpg" 
+                        alt="apc by Schneider Electric AP9613"
+                    >
+                    <h4>apc by Schneider Electric AP9613</h4>
+                    <div class="price">$225.00 <span class="old-price">$240.00</span></div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Deal 7 -->
+                <div class="product-card" data-id="55">
+                    <span class="badge">SALE</span>
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/hot-deals/deal7.jpg
+                    -->
+                    <img 
+                        src="images/deal-7.jpg" 
+                        alt="Okuma Cold Water Linecounter Trolling Reel"
+                    >
+                    <h4>Okuma Cold Water Line Counter Reel</h4>
+                    <div class="price">$345.00 <span class="old-price">$375.00</span></div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+            </div>
+            <button class="scroll-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- New Arrivals Carousel (7 items) -->
+    <section class="carousel-section">
+        <h2>New Arrivals</h2>
+        <div class="carousel-wrapper">
+            <button class="scroll-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-container">
+                <!-- Arrival 1 -->
+                <div class="product-card" data-id="105">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/new-arrivals/new1.jpg
+                    -->
+                    <img 
+                        src="images/arrival-1.jpg" 
+                        alt="adidas Women’s Gamecourt 2.0 Tennis Shoe, Light Aqua Off White"
+                    >
+                    <h4>adidas Women’s Gamecourt 2.0 Tennis Shoe, Light Aqua Off White</h4>
+                    <div class="price">$75.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Arrival 2 -->
+                <div class="product-card" data-id="52">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/new-arrivals/new2.jpg
+                    -->
+                    <img 
+                        src="images/arrival-2.jpg" 
+                        alt="New Balance Women’s 515 V3 Sneaker, White/Silvers"
+                    >
+                    <h4>New Balance Women’s 515 V3 Sneaker, White/Silvers</h4>
+                    <div class="price">$85.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Arrival 3 -->
+                <div class="product-card" data-id="104">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/new-arrivals/new3.jpg
+                    -->
+                    <img 
+                        src="images/arrival-3.jpg" 
+                        alt="Nike Women’s Gymnastics Shoes Sneaker, White/Pink"
+                    >
+                    <h4>Nike Women’s Gymnastics Shoes Sneaker, White/Pink</h4>
+                    <div class="price">$109.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Arrival 4 -->
+                <div class="product-card" data-id="47">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/new-arrivals/new4.jpg
+                    -->
+                    <img 
+                        src="images/arrival-4.jpg" 
+                        alt="adidas Women’s Run Falcon 5 Sneaker, Black"
+                    >
+                    <h4>adidas Women’s Run Falcon 5 Sneaker, Black</h4>
+                    <div class="price">$75.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Arrival 5 -->
+                <div class="product-card" data-id="12">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/new-arrivals/new5.jpg
+                    -->
+                    <img 
+                        src="images/arrival-5.jpg" 
+                        alt="adidas Women’s Runfalcon 3 Running Shoe, Wonder Orchid/White"
+                    >
+                    <h4>adidas Women’s Runfalcon 3 Running Shoe, Wonder Orchid/White</h4>
+                    <div class="price">$75.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Arrival 6 -->
+                <div class="product-card" data-id="106">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/new-arrivals/new6.jpg
+                    -->
+                    <img 
+                        src="images/arrival-6.jpg" 
+                        alt="adidas Women’s Cloudfoam Pure 2.0 Running Shoe"
+                    >
+                    <h4>adidas Women’s Cloudfoam Pure 2.0 Running Shoe, Black/White</h4>
+                    <div class="price">$79.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+
+                <!-- Arrival 7 -->
+                <div class="product-card" data-id="107">
+                    <i class="far fa-heart wishlist-icon"></i>
+                    <!-- IMAGE LINK:
+                         images/new-arrivals/new7.jpg
+                    -->
+                    <img 
+                        src="images/arrival-7.jpg" 
+                        alt="Nike Dunk Low Women's Shoes"
+                    >
+                    <h4>Nike Dunk Low Women's Shoes</h4>
+                    <div class="price">$110.00</div>
+                    <button class="btn-add-cart">Add to cart</button>
+                </div>
+            </div>
+            <button class="scroll-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Brands Carousel (9 items) -->
+    <section class="brands-section">
+        <div class="carousel-wrapper">
+            <button class="scroll-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <div class="carousel-container brand-container">
+                <div class="brand-card">
+                    <!-- IMAGE LINK:
+                         images/brands/brand1.png
+                    -->
+                    <img 
+                        src="images/brand-1.png" 
+                        alt="New Balance"
+                    >
+                </div>
+                <div class="brand-card">
+                    <!-- IMAGE LINK:
+                         images/brands/brand2.png
+                    -->
+                    <img 
+                        src="images/brand-2.png" 
+                        alt="Nike"
+                    >
+                </div>
+                <div class="brand-card">
+                    <!-- IMAGE LINK:
+                         images/brands/brand3.png
+                    -->
+                    <img 
+                        src="images/brand-3.png" 
+                        alt="Patagonia"
+                    >
+                </div>
+                <div class="brand-card">
+                    <!-- IMAGE LINK:
+                         images/brands/brand4.png
+                    -->
+                    <img 
+                        src="images/brand-4.png" 
+                        alt="Samsung"
+                    >
+                </div>
+                <div class="brand-card">
+                    <!-- IMAGE LINK:
+                         images/brands/brand5.png
+                    -->
+                    <img 
+                        src="images/brand-5.png" 
+                        alt="SEIKO"
+                    >
+                </div>
+                <div class="brand-card">
+                    <!-- IMAGE LINK:
+                         images/brands/brand6.png
+                    -->
+                    <img 
+                        src="images/brand-6.png" 
+                        alt="THE NORTH FACE"
+                    >
+                </div>
+                <div class="brand-card">
+                    <!-- IMAGE LINK:
+                         images/brands/brand7.png
+                    -->
+                    <img 
+                        src="images/brand-7.png" 
+                        alt="adidas"
+                    >
+                </div>
+                <div class="brand-card">
+                    <!-- IMAGE LINK:
+                         images/brands/brand8.png
+                    -->
+                    <img 
+                        src="images/brand-8.png" 
+                        alt="Columbia Sortswear Company"
+                    >
+                </div>
+                <div class="brand-card">
+                    <!-- IMAGE LINK:
+                         images/brands/brand9.png
+                    -->
+                    <img 
+                        src="images/brand-9.png" 
+                        alt="JBL"
+                    >
+                </div>
+            </div>
+            <button class="scroll-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Value Banners -->
+    <section class="perks-section">
+        <div class="perk-box">
+            <i class="fas fa-truck"></i>
+            <div>
+                <h4>Free Shipping</h4>
+                <p>on orders over $50</p>
+            </div>
+        </div>
+        <div class="perk-box">
+            <i class="fas fa-undo-alt"></i>
+            <div>
+                <h4>30-Day</h4>
+                <p>return guarantee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>“WebStore Inc. made ordering so effortless. The products arrived two days early and were packaged with great care!”</p>
+                <h5>Emily H.</h5>
+                <span>Seattle, WA</span>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>“Unbelievable customer support and top-notch quality. Highly recommend WebStore Inc. for all tech and home items.”</p>
+                <h5>Marcus B.</h5>
+                <span>Chicago, IL</span>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>“Great prices and seamless checkout experience! The items perfectly match the photos and descriptions.”</p>
+                <h5>Sophia Martinez</h5>
+                <span>Miami, FL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Banner -->
+    <section class="newsletter-section">
+        <div class="newsletter-card">
+            <h2>Stay Updated & Shop With Confidence</h2>
+            <p>Subscribe to our newsletter for the latest products, special offers, and exclusive updates from our store.</p>
+            <form
+    class="subscribe-form"
+    id="subscribeForm"
+>
+    <input
+        type="email"
+        id="subscribeEmail"
+        placeholder="example@mail.com"
+        required
+    >
+
+    <button
+        type="submit"
+        class="btn-subscribe"
+    >
+        Subscribe
+    </button>
+</form>
+
+<div
+    id="subscribeSuccess"
+    class="subscribe-success"
+    style="display: none;"
+>
+    Thanks for contacting us! We will be in touch with you shortly.
+</div>
+            <p class="sub-text">Or <a href="shop.html">start shopping now</a> and explore our latest products!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="careers.html">Careers</a>
+                <a href="refund-returns-policy.html">Refund & Returns Policy</a>
+                <a href="shipping-delivery.html">Shipping & Delivery</a>
+            </div>
+            <div class="footer-info">
+                <h3>WebStore Inc</h3>
+                <p>13 Marlin Ct, New Castle, DE 19720 USA</p>
+                <p>+13023022233</p>
+                <p>franklyn@lpteam.online</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2000 WebStore INC | <a href="terms-and-conditions.html">Terms & Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const prevBtns = document.querySelectorAll('.prev-btn');
+    const nextBtns = document.querySelectorAll('.next-btn');
+
+    nextBtns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wrapper = this.closest('.carousel-wrapper');
+            const container = wrapper.querySelector('.carousel-container');
+            container.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+    });
+
+    prevBtns.forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const wrapper = this.closest('.carousel-wrapper');
+            const container = wrapper.querySelector('.carousel-container');
+            container.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+    });
+});
+</script>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/shop.js"></script>
+
+    
+    
+</body>
+</html>

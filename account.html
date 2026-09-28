@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - WEBSTORE INC.</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/account.css">
+</head>
+<body class="account-page-body">
+
+    <!-- Top Header Bar -->
+<header>
+    <div class="top-bar">
+        <span>E-MAIL: franklyn@lpteam.online</span>
+        <span>Phone: +13023022233</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img 
+                src="images/logo.png" 
+                alt="WEBSTORE INC. Logo" 
+                class="site-logo"
+            >
+        </a>
+        
+        <div class="nav-links">
+            <a href="shop.html" class="active">SHOP</a>
+            <a href="about.html"class="active">ABOUT US</a>
+            <a href="contact.html"class="active">CONTACT</a>
+        </div>
+
+        <!-- All 4 Icons Wrapped Together inside .nav-icons -->
+        <div class="nav-icons">
+            <!-- Mini Cart Container -->
+            <div class="cart-wrapper" id="cartWrapper">
+                <div class="cart-trigger" id="cartTrigger">
+                    <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+                    <div class="cart-icon-box">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+
+                <div class="mini-cart-dropdown" id="miniCartDropdown">
+                    <div class="mini-cart-items" id="miniCartItems">
+                        <p class="empty-msg">Your cart is empty.</p>
+                    </div>
+                    
+                    <div class="mini-cart-footer" id="miniCartFooter" style="display: none;">
+                        <div class="subtotal-row">
+                            <span>SUBTOTAL:</span>
+                            <span id="miniCartSubtotal">$0.00</span>
+                        </div>
+                        <div class="mini-cart-actions">
+                            <a href="cart.html" class="btn-mini-cart">
+                                VIEW CART
+                            </a>
+                            <a href="checkout.html" class="btn-mini-cart">
+                                CHECKOUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Nav Icons -->
+            <a href="wishlist.html" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+            <a href="account.html" aria-label="Account"><i class="far fa-user"></i></a>
+
+            <!-- Search Toggle Button (Inside .nav-icons) -->
+            <button type="button" id="headerSearchToggle" class="nav-search-trigger" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+    <div id="searchOverlayBar" class="search-overlay-bar hidden">
+    <div class="search-overlay-inner">
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="productSearchInput" 
+                placeholder="Search Products" 
+                autocomplete="off"
+            />
+            <button type="button" id="productSearchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <button type="button" id="closeSearchBtn" class="close-search-btn" aria-label="Close Search">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+    <!-- Main Account Section -->
+    <main class="account-container">
+        <div class="account-grid">
+            
+            <!-- Login Column -->
+            <div class="account-box">
+                <h2>Login</h2>
+                <form id="loginForm" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="loginUsername">Email address <span class="required">*</span></label>
+                        <input type="text" id="loginUsername" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <input type="password" id="loginPassword" class="form-control" required>
+                            <i class="far fa-eye password-toggle" id="toggleLoginPassword"></i>
+                        </div>
+                    </div>
+
+                    <label class="remember-checkbox">
+                        <input type="checkbox" name="rememberme" value="forever">
+                        <span>Remember me</span>
+                    </label>
+
+                    <button type="submit" class="btn-account">Log in</button>
+                    <div id="loginFeedback"></div>
+                    <div>
+                        <a href="lost-password.html" class="lost-password-link">Lost your password?</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Register Column -->
+            <div class="account-box">
+                <h2>Register</h2>
+                <form id="registerForm" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="regEmail">Email address <span class="required">*</span></label>
+                        <input type="email" id="regEmail" class="form-control" required>
+                    </div>
+
+                    <p class="register-info">
+                        A link to set a new password will be sent to your email address.
+                    </p>
+
+                    <p class="register-info">
+                        Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="privacy-policy.html">privacy policy</a>.
+                    </p>
+
+                    <button type="submit" class="btn-account">Register</button>
+                    <div id="registerFeedback"></div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="careers.html">Careers</a>
+                <a href="refund-returns-policy.html">Refund & Returns Policy</a>
+                <a href="shipping-delivery.html">Shipping & Delivery</a>
+            </div>
+
+            <div class="footer-info">
+                <h3>WebStore Inc</h3>
+                <p>13 Marlin Ct, New Castle, DE 19720 USA</p>
+                <p>+13023022233</p>
+                <p>franklyn@lpteam.online</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2000 WebStore INC | <a href="terms-and-conditions.html">Terms & Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

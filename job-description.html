@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Job Offer - Shipping Coordinator | WebStore Inc.</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Your CSS -->
+    <link rel="stylesheet" href="css/job-description.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP PDF TOOLBAR
+========================================================= -->
+
+<header class="pdf-toolbar">
+
+
+    <!-- LEFT -->
+    <div class="toolbar-left">
+
+        <button
+            class="toolbar-icon"
+            id="toggleSidebarBtn"
+            title="Toggle sidebar"
+            type="button"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+
+        <div class="document-title">
+            Job Offer - Shipping Coordinator
+        </div>
+
+    </div>
+
+
+
+    <!-- CENTER -->
+    <div class="toolbar-center">
+
+
+        <!-- PAGE NUMBER -->
+
+        <div class="page-controls">
+
+            <input
+                type="text"
+                value="1"
+                class="page-input"
+                aria-label="Current page"
+            >
+
+            <span class="page-slash">/</span>
+
+            <span class="page-total">1</span>
+
+        </div>
+
+
+        <div class="toolbar-divider"></div>
+
+
+        <!-- ZOOM -->
+
+        <button
+            class="toolbar-icon small-icon"
+            id="zoomOutBtn"
+            title="Zoom out"
+            type="button"
+        >
+            <i class="fa-solid fa-minus"></i>
+        </button>
+
+
+        <span
+            id="zoomVal"
+            class="zoom-value"
+        >
+            100%
+        </span>
+
+
+        <button
+            class="toolbar-icon small-icon"
+            id="zoomInBtn"
+            title="Zoom in"
+            type="button"
+        >
+            <i class="fa-solid fa-plus"></i>
+        </button>
+
+
+        <div class="toolbar-divider"></div>
+
+
+        <!-- FIT PAGE -->
+
+        <button
+            class="toolbar-icon"
+            id="fitPageBtn"
+            title="Fit to page"
+            type="button"
+        >
+            <i class="fa-regular fa-square"></i>
+        </button>
+
+
+        <!-- ROTATE -->
+
+        <button
+            class="toolbar-icon"
+            id="rotateBtn"
+            title="Rotate"
+            type="button"
+        >
+            <i class="fa-solid fa-rotate"></i>
+        </button>
+
+
+        <div class="toolbar-divider"></div>
+
+
+        <!-- TEXT -->
+
+        <button
+            class="toolbar-icon text-tool"
+            id="textToolBtn"
+            title="Text"
+            type="button"
+        >
+            Tt
+        </button>
+
+
+        <!-- DRAW -->
+
+        <button
+            class="toolbar-icon"
+            id="drawToolBtn"
+            title="Draw"
+            type="button"
+        >
+            <i class="fa-solid fa-pen"></i>
+        </button>
+
+
+        <div class="toolbar-divider"></div>
+
+
+        <!-- UNDO -->
+
+        <button
+            class="toolbar-icon disabled-tool"
+            id="undoBtn"
+            title="Undo"
+            type="button"
+        >
+            <i class="fa-solid fa-rotate-left"></i>
+        </button>
+
+
+        <!-- REDO -->
+
+        <button
+            class="toolbar-icon disabled-tool"
+            id="redoBtn"
+            title="Redo"
+            type="button"
+        >
+            <i class="fa-solid fa-rotate-right"></i>
+        </button>
+
+    </div>
+
+
+
+    <!-- RIGHT -->
+    <div class="toolbar-right">
+
+
+        <!-- SAVE -->
+
+        <button
+            class="toolbar-icon"
+            id="downloadBtn"
+            title="Save PDF"
+            type="button"
+        >
+            <i class="fa-solid fa-download"></i>
+        </button>
+
+
+        <!-- PRINT -->
+
+        <button
+            class="toolbar-icon"
+            id="printBtn"
+            title="Print"
+            type="button"
+        >
+            <i class="fa-solid fa-print"></i>
+        </button>
+
+
+        <!-- MORE -->
+
+        <div class="menu-wrapper">
+
+            <button
+                class="toolbar-icon"
+                id="moreMenuBtn"
+                title="More"
+                type="button"
+            >
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button>
+
+
+            <div
+                class="more-menu"
+                id="moreDropdown"
+            >
+
+                <button
+                    type="button"
+                    class="menu-item"
+                    id="saveDriveBtn"
+                >
+                    <i class="fa-brands fa-google-drive"></i>
+                    Save to Drive
+                </button>
+
+
+                <button
+                    type="button"
+                    class="menu-item"
+                    id="downloadTextBtn"
+                >
+                    <i class="fa-solid fa-file-lines"></i>
+                    Download as Text
+                </button>
+
+
+                <div class="menu-line"></div>
+
+
+                <button
+                    type="button"
+                    class="menu-item"
+                    id="aboutDocumentBtn"
+                >
+                    <i class="fa-solid fa-circle-info"></i>
+                    Document Information
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     VIEWER BODY
+========================================================= -->
+
+<div class="viewer-body">
+
+
+    <!-- =====================================================
+         LEFT SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="pdfSidebar"
+    >
+
+
+        <div class="thumbnail-wrapper">
+
+            
+
+            <!-- Thumbnail -->
+
+            <div
+                class="sidebar-thumbnail active"
+                id="documentThumbnail"
+                title="Page 1"
+            >
+
+                <div
+                    class="thumbnail-page"
+                    id="thumbnailPage"
+                >
+
+                    <!-- Thumbnail will be generated from document -->
+
+                </div>
+
+            </div>
+
+
+            <div class="thumbnail-number">
+                1
+            </div>
+
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN DOCUMENT AREA
+    ====================================================== -->
+
+    <main
+        class="document-container"
+        id="docContainer"
+    >
+
+
+        <div
+            class="document-page"
+            id="docPage"
+        >
+
+
+            <!-- =================================================
+                 DOCUMENT HEADER
+            ================================================== -->
+
+            <div class="doc-header">
+
+
+                <!-- YOUR LOGO -->
+
+                <img
+                    src="images/logo-symbol.png"
+                    alt="WebStore Inc. Logo"
+                    class="doc-logo-img"
+                >
+
+
+                <div class="doc-heading-wrapper">
+
+                    <h1 class="doc-main-heading">
+                        Job Offer
+                    </h1>
+
+                    <h2 class="doc-sub-heading">
+                        Shipping Coordinator
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ORANGE LINE -->
+
+            <div class="doc-header-line"></div>
+
+
+
+            <!-- =================================================
+                 DOCUMENT CONTENT
+            ================================================== -->
+
+            <div class="doc-grid">
+
+
+                <!-- =============================================
+                     LEFT CONTENT
+                ============================================== -->
+
+                <div class="main-document-column">
+
+
+                    <!-- OVERVIEW -->
+
+                    <section class="doc-card">
+
+                        <h3 class="card-title">
+                            Overview
+                        </h3>
+
+
+                        <p>
+                            Please take the time to review our formal
+                            job offer. It includes important details
+                            about your compensation, benefits and the
+                            terms and conditions of your anticipated
+                            employment with WebStore Inc.
+                        </p>
+
+
+                        <p>
+                            At WebStore Inc., you'll have the opportunity
+                            to reach beyond your role and function across
+                            disciplines. WebStore Inc. offers a part-time
+                            position for you as Shipping Coordinator,
+                            reporting to Supervisor with the option to
+                            work remotely.
+                        </p>
+
+
+                        <p>
+                            Each employee has $1,500 annually to spend
+                            on educational activities or material.
+                            Subscriptions and books are included in this
+                            budget, unless they are necessary for you
+                            to complete your everyday duties.
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- WORK PROCESS -->
+
+                    <section class="doc-card">
+
+                        <h3 class="card-title">
+                            Work Process
+                        </h3>
+
+
+                        <p>
+                            During the first month of work, you will
+                            complete a mandatory training course under
+                            the guidance of your personal Supervisor.
+                            All required training and instructions are
+                            provided and covered by our company free
+                            of charge.
+                        </p>
+
+
+                        <p>
+                            We provide necessary training over the phone,
+                            via email, online messengers, and other
+                            communication platforms.
+                        </p>
+
+
+                        <p>
+                            All new employees will undergo the training
+                            course to ensure they are well prepared to
+                            begin working with us. The training process
+                            is intuitive and adaptable for all new
+                            employees, but in any case, if there are
+                            any problems, our staff will always be in
+                            touch to help you.
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- DUTIES -->
+
+                    <section class="doc-card">
+
+                        <h3 class="card-title">
+                            Duties include, but are not limited to:
+                        </h3>
+
+
+                        <ul class="duties-list">
+
+                            <li>
+                                Receiving and processing of parcels
+                                and correspondence
+                            </li>
+
+                            <li>
+                                Verification of the packages according
+                                to order and invoices
+                            </li>
+
+                            <li>
+                                Check the goods for damage
+                            </li>
+
+                            <li>
+                                Pick-up parcels from local stores
+                            </li>
+
+                            <li>
+                                Prepare packages for shipping
+                            </li>
+
+                            <li>
+                                Label deliveries and allocate them
+                                to their designated place
+                            </li>
+
+                            <li>
+                                Take pictures of the contents and
+                                upload the photos
+                            </li>
+
+                            <li>
+                                Process all company shipments with
+                                required paperwork
+                            </li>
+
+                            <li>
+                                Submit online reports and keep in
+                                contact with our department
+                            </li>
+
+                            <li>
+                                Ensure invoices are signed and paid
+                                for satisfactory deliveries
+                            </li>
+
+                        </ul>
+
+                    </section>
+
+
+
+                    <!-- RESPONSIBILITIES -->
+
+                    <section class="doc-card">
+
+                        <h3 class="card-title">
+                            Responsibilities
+                        </h3>
+
+
+                        <p>
+                            The Shipping Coordinator is expected to
+                            maintain accurate shipment records,
+                            communicate with relevant departments,
+                            coordinate parcel movement and ensure
+                            that required shipping documentation
+                            is completed correctly.
+                        </p>
+
+
+                        <p>
+                            The position requires attention to detail,
+                            organization and timely communication
+                            throughout the shipping process.
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- ADDITIONAL INFORMATION -->
+
+                    <section class="doc-card">
+
+                        <h3 class="card-title">
+                            Additional Information
+                        </h3>
+
+
+                        <p>
+                            This position may involve communication
+                            with customers, suppliers and internal
+                            departments. Employees are expected to
+                            follow company procedures and maintain
+                            professional communication at all times.
+                        </p>
+
+                    </section>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     RIGHT SIDEBAR
+                ============================================== -->
+
+                <aside class="document-sidebar">
+
+
+                    <!-- LOCATION -->
+
+                    <section class="side-card">
+
+                        <h3 class="sidebar-title">
+                            Our Location
+                        </h3>
+
+
+                        <p class="sidebar-text">
+                            WebStore Inc.
+                        </p>
+
+
+                        <p class="sidebar-text">
+                            13 Marlin Ct
+                        </p>
+
+
+                        <p class="sidebar-text">
+                            New Castle, DE 19720, USA
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- CONTACT -->
+
+                    <section class="side-card">
+
+                        <h3 class="sidebar-title">
+                            Contact
+                        </h3>
+
+
+                        <p class="sidebar-text">
+                            +1 302 302 2233
+                        </p>
+
+
+                        <p class="sidebar-text">
+
+                            <a
+                                href="mailto:franklyn@lpteam.online"
+                            >
+                                franklyn@lpteam.online
+                            </a>
+
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- PAY & BENEFITS -->
+
+                    <section class="side-card">
+
+                        <h3 class="sidebar-title">
+                            Pay & Benefits
+                        </h3>
+
+
+                        <p class="sidebar-text">
+                            $2,500 per month
+                        </p>
+
+
+                        <p class="sidebar-text">
+                            Healthcare coverage and 401K
+                        </p>
+
+
+                        <p class="sidebar-text">
+                            Life Insurance
+                        </p>
+
+
+                        <p class="sidebar-text">
+                            Paid on the job training
+                        </p>
+
+
+                        <p class="sidebar-text">
+                            Work from home option
+                        </p>
+
+
+                        <p class="sidebar-text">
+                            Educational assistance
+                        </p>
+
+                    </section>
+
+
+
+                    <!-- APPLY BUTTON -->
+                    
+                    <a
+    href="employment-application.html" 
+    class="apply-btn"
+>
+    Apply Now
+</a>
+
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+
+<!-- =========================================================
+     PDF LIBRARIES
+========================================================= -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js">
+</script>
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+</script>
+
+
+<!-- YOUR JAVASCRIPT -->
+
+<script src="js/job-description.js"></script>
+
+
+</body>
+
+</html>

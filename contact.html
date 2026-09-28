@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - WebStore Inc</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Stylesheet -->
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <header>
+    <div class="top-bar">
+        <span>E-MAIL: franklyn@lpteam.online</span>
+        <span>Phone: +13023022233</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img 
+                src="images/logo.png" 
+                alt="WEBSTORE INC. Logo" 
+                class="site-logo"
+            >
+        </a>
+        
+        <div class="nav-links">
+            <a href="shop.html">SHOP</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="contact.html"class="active">CONTACT</a>
+        </div>
+
+        <!-- All 4 Icons Wrapped Together inside .nav-icons -->
+        <div class="nav-icons">
+            <!-- Mini Cart Container -->
+            <div class="cart-wrapper" id="cartWrapper">
+                <div class="cart-trigger" id="cartTrigger">
+                    <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+                    <div class="cart-icon-box">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+
+                <div class="mini-cart-dropdown" id="miniCartDropdown">
+                    <div class="mini-cart-items" id="miniCartItems">
+                        <p class="empty-msg">Your cart is empty.</p>
+                    </div>
+                    
+                    <div class="mini-cart-footer" id="miniCartFooter" style="display: none;">
+                        <div class="subtotal-row">
+                            <span>SUBTOTAL:</span>
+                            <span id="miniCartSubtotal">$0.00</span>
+                        </div>
+                        <div class="mini-cart-actions">
+                            <a href="cart.html" class="btn-mini-cart">
+                                VIEW CART
+                            </a>
+                            <a href="checkout.html" class="btn-mini-cart">
+                                CHECKOUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Nav Icons -->
+            <a href="wishlist.html" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+            <a href="account.html" aria-label="Account"><i class="far fa-user"></i></a>
+
+            <!-- Search Toggle Button (Inside .nav-icons) -->
+            <button type="button" id="headerSearchToggle" class="nav-search-trigger" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+    <div id="searchOverlayBar" class="search-overlay-bar hidden">
+    <div class="search-overlay-inner">
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="productSearchInput" 
+                placeholder="Search Products" 
+                autocomplete="off"
+            />
+            <button type="button" id="productSearchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <button type="button" id="closeSearchBtn" class="close-search-btn" aria-label="Close Search">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+    <!-- Main Container -->
+    <main class="page-container">
+        
+        <!-- Contact Info Cards Row -->
+        <section class="info-cards-grid">
+            
+            <!-- Address Card -->
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+                <h3>Address</h3>
+                <p>13 Marlin Ct<br>New Castle, DE 19720<br>United States</p>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <h3>Phone</h3>
+                <p>+13023022233</p>
+            </div>
+
+            <!-- Email Card -->
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p><a href="mailto:franklyn@lpteam.online">franklyn@lpteam.online</a></p>
+            </div>
+
+            <!-- Business Hours Card -->
+            <div class="info-card">
+                <div class="card-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <h3>Business Hours</h3>
+                <p>Mon – Fri:<br>9:00 AM – 6:00 PM<br>Sat – Sun: Closed</p>
+            </div>
+
+        </section>
+
+        <!-- Contact Form Container -->
+        <section class="contact-form-section">
+            <form id="contactForm" class="contact-form" novalidate>
+                
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="fullName">Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    <small class="form-hint">We'll never share your email with anyone.</small>
+                </div>
+
+                <!-- Subject Dropdown -->
+                <div class="form-group">
+                    <label for="subject">Subject <span class="required">*</span></label>
+                    <div class="select-wrapper">
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected hidden>Select a topic</option>
+                            <option value="Product Question">Product Question</option>
+                            <option value="Order Issue">Order Issue</option>
+                            <option value="Return/Exchange">Return/Exchange</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <i class="fa-solid fa-caret-down select-icon"></i>
+                    </div>
+                    <small class="form-hint">Choose the reason for your inquiry.</small>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    <small class="form-hint">Please include any relevant details about your inquiry.</small>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Send Message</button>
+                <div id="formFeedback" class="form-feedback"></div>
+            </form>
+        </section>
+
+        <!-- Helpful Links Grid -->
+        <section class="helpful-links-section">
+            <h2 class="section-title">Helpful Links</h2>
+            
+            <div class="helpful-grid">
+                
+                <a href="faq.html" class="helpful-card">
+                    <div class="card-icon link-icon">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </div>
+                    <h3>FAQ</h3>
+                    <p>Find answers to the most common questions about products, shipping, and orders.</p>
+                </a>
+
+                <a href="refund-returns-policy.html" class="helpful-card">
+                    <div class="card-icon link-icon">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </div>
+                    <h3>Refund & Returns Policy</h3>
+                    <p>Learn how to return or exchange products safely and quickly.</p>
+                </a>
+
+                <a href="shipping-delivery.html" class="helpful-card">
+                    <div class="card-icon link-icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3>Shipping & Delivery</h3>
+                    <p>Details about our shipping methods, delivery times, and tracking.</p>
+                </a>
+
+                <a href="terms-and-conditions.html" class="helpful-card">
+                    <div class="card-icon link-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <h3>Terms & Conditions</h3>
+                    <p>Important rules and guidelines for using our website and services.</p>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="careers.html">Careers</a>
+                <a href="refund-returns-policy.html">Refund & Returns Policy</a>
+                <a href="shipping-delivery.html">Shipping & Delivery</a>
+            </div>
+
+            <div class="footer-info">
+                <h3>WebStore Inc</h3>
+                <p>13 Marlin Ct, New Castle, DE 19720 USA</p>
+                <p>+13023022233</p>
+                <p>franklyn@lpteam.online</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2000 WebStore INC | <a href="terms-and-conditions.html">Terms & Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

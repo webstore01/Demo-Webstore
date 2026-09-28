@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - WebStore Inc</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom Stylesheet -->
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <header>
+    <div class="top-bar">
+        <span>E-MAIL: franklyn@lpteam.online</span>
+        <span>Phone: +13023022233</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img 
+                src="images/logo.png" 
+                alt="WEBSTORE INC. Logo" 
+                class="site-logo"
+            >
+        </a>
+        
+        <div class="nav-links">
+            <a href="shop.html">SHOP</a>
+            <a href="about.html"class="active">ABOUT US</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+
+        <!-- All 4 Icons Wrapped Together inside .nav-icons -->
+        <div class="nav-icons">
+            <!-- Mini Cart Container -->
+            <div class="cart-wrapper" id="cartWrapper">
+                <div class="cart-trigger" id="cartTrigger">
+                    <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+                    <div class="cart-icon-box">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+
+                <div class="mini-cart-dropdown" id="miniCartDropdown">
+                    <div class="mini-cart-items" id="miniCartItems">
+                        <p class="empty-msg">Your cart is empty.</p>
+                    </div>
+                    
+                    <div class="mini-cart-footer" id="miniCartFooter" style="display: none;">
+                        <div class="subtotal-row">
+                            <span>SUBTOTAL:</span>
+                            <span id="miniCartSubtotal">$0.00</span>
+                        </div>
+                        <div class="mini-cart-actions">
+                            <a href="cart.html" class="btn-mini-cart">
+                                VIEW CART
+                            </a>
+                            <a href="checkout.html" class="btn-mini-cart">
+                                CHECKOUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Nav Icons -->
+            <a href="wishlist.html" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+            <a href="account.html" aria-label="Account"><i class="far fa-user"></i></a>
+
+            <!-- Search Toggle Button (Inside .nav-icons) -->
+            <button type="button" id="headerSearchToggle" class="nav-search-trigger" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+    <div id="searchOverlayBar" class="search-overlay-bar hidden">
+    <div class="search-overlay-inner">
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="productSearchInput" 
+                placeholder="Search Products" 
+                autocomplete="off"
+            />
+            <button type="button" id="productSearchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <button type="button" id="closeSearchBtn" class="close-search-btn" aria-label="Close Search">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+    <!-- Main Content Container -->
+    <main class="page-container">
+        
+        <!-- Welcome Hero Box -->
+        <section class="hero-welcome-card">
+            <h1>Welcome to WebStore Inc</h1>
+            <p>We’re passionate about bringing high-quality products to your doorstep, making shopping simple, enjoyable, and reliable. At WebStore Inc, every order matters and every customer counts.</p>
+        </section>
+
+        <!-- Our Mission Section -->
+        <section class="mission-section">
+    <div class="mission-icon">
+        <svg width="68" height="68" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Target Base (Red & White) -->
+            <circle cx="32" cy="32" r="28" fill="#FF3B30" stroke="#000000" stroke-width="4.5"/>
+            <circle cx="32" cy="32" r="20" fill="#FFFFFF" stroke="#000000" stroke-width="4"/>
+            <circle cx="32" cy="32" r="12" fill="#FF3B30" stroke="#000000" stroke-width="3.5"/>
+            <circle cx="32" cy="32" r="5" fill="#FFFFFF"/>
+            
+            <!-- Dart (Cyan/Blue Feather & Shaft) -->
+            <g transform="translate(4, -4)">
+                <!-- Dart Shaft -->
+                <path d="M 32 32 L 48 16" stroke="#007AFF" stroke-width="5" stroke-linecap="round"/>
+                <path d="M 32 32 L 48 16" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+                
+                <!-- Dart Flight/Feather -->
+                <path d="M 44 20 C 44 10, 56 8, 58 10 C 60 12, 58 24, 48 24 Z" fill="#20C9FF" stroke="#000000" stroke-width="3.5" stroke-linejoin="round"/>
+            </g>
+        </svg>
+    </div>
+    <div class="mission-text">
+        <h2>Our Mission</h2>
+        <p>To make high-quality products accessible to everyone, while providing a seamless and enjoyable shopping experience. We aim to earn your trust with every order.</p>
+    </div>
+</section>
+
+        <!-- Our Values Section -->
+        <section class="values-section">
+            <h2 class="section-title">Our Values</h2>
+            
+            <div class="values-grid">
+                
+                <!-- Quality Card -->
+                <div class="value-card">
+                    <div class="card-icon check-icon">
+                        <i class="fa-solid fa-square-check"></i>
+                    </div>
+                    <h3>Quality</h3>
+                    <p>We offer only the best products to ensure satisfaction and reliability for our customers.</p>
+                </div>
+
+                <!-- Transparency Card -->
+                <div class="value-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3>Transparency</h3>
+                    <p>Clear information about products, shipping, and returns so you always know what to expect.</p>
+                </div>
+
+                <!-- Customer Service Card -->
+                <div class="value-card">
+                    <div class="card-icon handshake-icon">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3>Customer Service</h3>
+                    <p>Your satisfaction is our top priority — we are here to help before, during, and after your purchase.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- How We Operate Section -->
+        <section class="operate-section">
+            <h2 class="section-title">How We Operate</h2>
+
+            <div class="operate-grid">
+                
+                <!-- Curate Products -->
+                <div class="operate-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h3>Curate Products</h3>
+                    <p>We carefully select high-quality items from trusted brands to offer only the best for you.</p>
+                </div>
+
+                <!-- Fast Processing -->
+                <div class="operate-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+                    <h3>Fast Processing</h3>
+                    <p>Orders are processed quickly and efficiently to ensure your products reach you on time.</p>
+                </div>
+
+                <!-- Customer Support -->
+                <div class="operate-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-comment-dots"></i>
+                    </div>
+                    <h3>Customer Support</h3>
+                    <p>We provide friendly, responsive support before, during, and after your purchase.</p>
+                </div>
+
+                <!-- Quality Assurance -->
+                <div class="operate-card">
+                    <div class="card-icon check-icon">
+                        <i class="fa-solid fa-square-check"></i>
+                    </div>
+                    <h3>Quality Assurance</h3>
+                    <p>Every item is checked for quality before shipping, so you receive only perfect products.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-section">
+            <h2 class="section-title">Why Choose Us</h2>
+
+            <div class="why-choose-grid">
+                
+                <!-- Top Quality Products -->
+                <div class="why-card">
+                    <h3>Top Quality Products</h3>
+                    <p>We only offer carefully selected items that meet our high standards, ensuring you get the best every time.</p>
+                </div>
+
+                <!-- Fast & Reliable Shipping -->
+                <div class="why-card">
+                    <h3>Fast & Reliable Shipping</h3>
+                    <p>We make sure your orders reach you promptly and safely, so you can enjoy your products without delay.</p>
+                </div>
+
+                <!-- Exceptional Support -->
+                <div class="why-card">
+                    <h3>Exceptional Support</h3>
+                    <p>Our friendly support team is always ready to help with questions, returns, or any concerns you may have.</p>
+                </div>
+
+                <!-- Trusted Experience -->
+                <div class="why-card">
+                    <h3>Trusted Experience</h3>
+                    <p>With years of experience in online retail, we understand what matters most to our customers.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Newsletter / Subscribe Card -->
+        <section class="newsletter-card">
+            <h2>Stay Updated & Shop With Confidence</h2>
+            <p>Subscribe to our newsletter for the latest products, special offers, and exclusive updates from our store.</p>
+            
+            <form
+    class="subscribe-form"
+    id="subscribeForm"
+>
+    <input
+        type="email"
+        id="subscribeEmail"
+        placeholder="example@mail.com"
+        required
+    >
+
+    <button
+        type="submit"
+        class="btn-subscribe"
+    >
+        Subscribe
+    </button>
+</form>
+<div
+    id="subscribeSuccess"
+    class="subscribe-success"
+    style="display: none;"
+>
+    Thanks for contacting us! We will be in touch with you shortly.
+</div>
+            <p class="sub-text">Or <a href="shop.html">start shopping now</a> and explore our latest products!</p>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="careers.html">Careers</a>
+                <a href="refund-returns-policy.html">Refund & Returns Policy</a>
+                <a href="shipping-delivery.html">Shipping & Delivery</a>
+            </div>
+            <div class="footer-info">
+                <h3>WebStore Inc</h3>
+                <p>13 Marlin Ct, New Castle, DE 19720 USA</p>
+                <p>+13023022233</p>
+                <p>franklyn@lpteam.online</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2000 WebStore INC | <a href="terms-and-conditions.html">Terms & Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+
+    <script>
+        document.getElementById('scrollTopBtn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        /* =========================================================
+   NEWSLETTER SUBSCRIPTION
+========================================================= */
+
+const subscribeForm =
+    document.getElementById(
+        "subscribeForm"
+    );
+
+const subscribeEmail =
+    document.getElementById(
+        "subscribeEmail"
+    );
+
+const subscribeSuccess =
+    document.getElementById(
+        "subscribeSuccess"
+    );
+
+
+if (
+    subscribeForm &&
+    subscribeEmail &&
+    subscribeSuccess
+) {
+
+    subscribeForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            /* Browser checks email format */
+
+            if (
+                !subscribeEmail.checkValidity()
+            ) {
+
+                subscribeEmail.reportValidity();
+
+                return;
+
+            }
+
+
+            /* Hide the form */
+
+            subscribeForm.style.display =
+                "none";
+
+
+            /* Show success message */
+
+            subscribeSuccess.style.display =
+                "block";
+
+        }
+    );
+
+}
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - WebStore Inc</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom Stylesheet -->
+     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/faq.css">
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <header>
+    <div class="top-bar">
+        <span>E-MAIL: franklyn@lpteam.online</span>
+        <span>Phone: +13023022233</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img 
+                src="images/logo.png" 
+                alt="WEBSTORE INC. Logo" 
+                class="site-logo"
+            >
+        </a>
+        
+        <div class="nav-links">
+            <a href="shop.html"class="active">SHOP</a>
+            <a href="about.html"class="active">ABOUT US</a>
+            <a href="contact.html"class="active">CONTACT</a>
+        </div>
+
+        <!-- All 4 Icons Wrapped Together inside .nav-icons -->
+        <div class="nav-icons">
+            <!-- Mini Cart Container -->
+            <div class="cart-wrapper" id="cartWrapper">
+                <div class="cart-trigger" id="cartTrigger">
+                    <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+                    <div class="cart-icon-box">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+
+                <div class="mini-cart-dropdown" id="miniCartDropdown">
+                    <div class="mini-cart-items" id="miniCartItems">
+                        <p class="empty-msg">Your cart is empty.</p>
+                    </div>
+                    
+                    <div class="mini-cart-footer" id="miniCartFooter" style="display: none;">
+                        <div class="subtotal-row">
+                            <span>SUBTOTAL:</span>
+                            <span id="miniCartSubtotal">$0.00</span>
+                        </div>
+                        <div class="mini-cart-actions">
+                            <a href="cart.html" class="btn-mini-cart">
+                                VIEW CART
+                            </a>
+                            <a href="checkout.html" class="btn-mini-cart">
+                                CHECKOUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Nav Icons -->
+            <a href="wishlist.html" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+            <a href="account.html" aria-label="Account"><i class="far fa-user"></i></a>
+
+            <!-- Search Toggle Button (Inside .nav-icons) -->
+            <button type="button" id="headerSearchToggle" class="nav-search-trigger" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+    <div id="searchOverlayBar" class="search-overlay-bar hidden">
+    <div class="search-overlay-inner">
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="productSearchInput" 
+                placeholder="Search Products" 
+                autocomplete="off"
+            />
+            <button type="button" id="productSearchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <button type="button" id="closeSearchBtn" class="close-search-btn" aria-label="Close Search">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+    <!-- Main Content Container -->
+    <main class="page-container">
+        
+        <div class="faq-card">
+            
+            <p class="faq-intro">
+                Here are answers to some common questions about employment and shipping operations at WebStore Inc. If you don’t find your question here, please contact us at <a href="mailto:franklyn@lpteam.online">franklyn@lpteam.online</a>.
+            </p>
+
+            <!-- 1 -->
+            <div class="faq-item">
+                <h2 class="faq-question">1. Is this position compatible with full-time employment elsewhere?</h2>
+                <div class="faq-answer">
+                    <p>Yes. This is a part-time role that typically requires 2–3 hours per day. It does not require presence at the company's office and can easily be combined with another job or studies.</p>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="faq-item">
+                <h2 class="faq-question">2. Is remote work permitted?</h2>
+                <div class="faq-answer">
+                    <p>Yes. This role is fully remote. You work from home. The only exceptions are dropping off packages at the post office and occasional retail store pickups.</p>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="faq-item">
+                <h2 class="faq-question">3. Where is the company office located?</h2>
+                <div class="faq-answer">
+                    <p>Our registered address is: 1025 Boxwood Rd, Wilmington, DE 19804, United States.</p>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="faq-item">
+                <h2 class="faq-question">4. Is prior experience required?</h2>
+                <div class="faq-answer">
+                    <p>No. Previous experience is not mandatory. All new employees go through a one-month paid training period under the guidance of a designated supervisor.</p>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="faq-item">
+                <h2 class="faq-question">5. Is training required, and is it paid?</h2>
+                <div class="faq-answer">
+                    <p>Yes. Training lasts one month and is fully compensated at the base salary rate ($2,500/month). During training, a supervisor walks you through every step of the process. After successful completion, you become eligible for performance bonuses starting in your second month.</p>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="faq-item">
+                <h2 class="faq-question">6. What are the main responsibilities?</h2>
+                <div class="faq-answer">
+                    <p>You receive assigned shipments, verify package details and condition, prepare items according to instructions, and forward them using prepaid shipping labels provided by the company.</p>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="faq-item">
+                <h2 class="faq-question">7. How much time is required on a daily basis?</h2>
+                <div class="faq-answer">
+                    <p>Daily tasks typically require approximately 2–3 hours, depending on workload. The schedule is flexible — you choose when to complete your tasks as long as deadlines are met.</p>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="faq-item">
+                <h2 class="faq-question">8. What steps should I take after receiving a package?</h2>
+                <div class="faq-answer">
+                    <p>You will receive written instructions for each shipment. Inspect the contents, photograph them, prepare a report, and ship the package using the prepaid label provided. Your supervisor will guide you through the process during training.</p>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="faq-item">
+                <h2 class="faq-question">9. Why might a package be addressed to another individual?</h2>
+                <div class="faq-answer">
+                    <p>Some shipments are labeled with customer or client names. You will be informed in advance and are expected to ensure availability for scheduled deliveries.</p>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="faq-item">
+                <h2 class="faq-question">10. What if delivery occurs while I am not at home?</h2>
+                <div class="faq-answer">
+                    <p>Where permitted by the carrier, you may authorize delivery to a specified location by completing a delivery release form in advance.</p>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="faq-item">
+                <h2 class="faq-question">11. What happens if a delivery attempt is unsuccessful?</h2>
+                <div class="faq-answer">
+                    <p>Carriers generally make additional delivery attempts. If further delivery is not scheduled, you may need to contact the carrier to assist with resolution:</p>
+                    <ul class="faq-list">
+                        <li><strong>FedEx:</strong> 800-463-3339</li>
+                        <li><strong>UPS (Domestic):</strong> 800-742-5877</li>
+                        <li><strong>UPS (International):</strong> 800-782-7892</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="faq-item">
+                <h2 class="faq-question">12. Who is responsible for shipping costs?</h2>
+                <div class="faq-answer">
+                    <p>The company covers all shipping expenses. Prepaid shipping labels are provided for every shipment. You never pay out of pocket.</p>
+                </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="faq-item">
+                <h2 class="faq-question">13. How are packages forwarded?</h2>
+                <div class="faq-answer">
+                    <p>Packages are prepared according to your instructions and delivered to authorized shipping providers such as USPS, UPS, FedEx, or other approved carriers.</p>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="faq-item">
+                <h2 class="faq-question">14. What equipment is required?</h2>
+                <div class="faq-answer">
+                    <p>You need reliable internet access, a cell phone, a scale, and ideally a printer. A smartphone or digital camera is needed for photographing package contents. You should also have enough storage space at home for up to 10 packages (approximately 20×20×15 inches each).</p>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="faq-item">
+                <h2 class="faq-question">15. How is compensation provided?</h2>
+                <div class="faq-answer">
+                    <p>Payments are issued via direct bank deposit.</p>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="faq-item">
+                <h2 class="faq-question">16. How often are payments made?</h2>
+                <div class="faq-answer">
+                    <p>After the training period, the base salary is paid in two equal installments per month. The bonus, if awarded, is paid once per month.</p>
+                </div>
+            </div>
+
+            <!-- 17 -->
+            <div class="faq-item">
+                <h2 class="faq-question">17. When can employment begin?</h2>
+                <div class="faq-answer">
+                    <p>Work may begin after completion of the onboarding process and execution of the employment agreement.</p>
+                </div>
+            </div>
+
+            <!-- 18 -->
+            <div class="faq-item">
+                <h2 class="faq-question">18. What is my earning potential?</h2>
+                <div class="faq-answer">
+                    <p>Base salary is $2,500/month. With performance bonuses, total compensation can reach up to $5,000/month. Bonuses are based on timely task completion and accurate reporting.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="faq.html" class="active-footer">FAQ</a>
+                <a href="careers.html">Careers</a>
+                <a href="refund-returns-policy.html">Refund & Returns Policy</a>
+                <a href="shipping-delivery.html">Shipping & Delivery</a>
+            </div>
+
+            <div class="footer-info">
+                <h3>WebStore Inc</h3>
+                <p>13 Marlin Ct, New Castle, DE 19720 USA</p>
+                <p>+13023022233</p>
+                <p>franklyn@lpteam.online</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2000 WebStore INC | <a href="terms-and-conditions.html">Terms & Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('scrollTopBtn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

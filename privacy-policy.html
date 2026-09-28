@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - WebStore Inc</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/privacy-policy.css">
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <header>
+    <div class="top-bar">
+        <span>E-MAIL: franklyn@lpteam.online</span>
+        <span>Phone: +13023022233</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img 
+                src="images/logo.png" 
+                alt="WEBSTORE INC. Logo" 
+                class="site-logo"
+            >
+        </a>
+        
+        <div class="nav-links">
+            <a href="shop.html" class="active">SHOP</a>
+            <a href="about.html"class="active">ABOUT US</a>
+            <a href="contact.html"class="active">CONTACT</a>
+        </div>
+
+        <!-- All 4 Icons Wrapped Together inside .nav-icons -->
+        <div class="nav-icons">
+            <!-- Mini Cart Container -->
+            <div class="cart-wrapper" id="cartWrapper">
+                <div class="cart-trigger" id="cartTrigger">
+                    <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+                    <div class="cart-icon-box">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+
+                <div class="mini-cart-dropdown" id="miniCartDropdown">
+                    <div class="mini-cart-items" id="miniCartItems">
+                        <p class="empty-msg">Your cart is empty.</p>
+                    </div>
+                    
+                    <div class="mini-cart-footer" id="miniCartFooter" style="display: none;">
+                        <div class="subtotal-row">
+                            <span>SUBTOTAL:</span>
+                            <span id="miniCartSubtotal">$0.00</span>
+                        </div>
+                        <div class="mini-cart-actions">
+                            <a href="cart.html" class="btn-mini-cart">
+                                VIEW CART
+                            </a>
+                            <a href="checkout.html" class="btn-mini-cart">
+                                CHECKOUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Nav Icons -->
+            <a href="wishlist.html" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+            <a href="account.html" aria-label="Account"><i class="far fa-user"></i></a>
+
+            <!-- Search Toggle Button (Inside .nav-icons) -->
+            <button type="button" id="headerSearchToggle" class="nav-search-trigger" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+    <div id="searchOverlayBar" class="search-overlay-bar hidden">
+    <div class="search-overlay-inner">
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="productSearchInput" 
+                placeholder="Search Products" 
+                autocomplete="off"
+            />
+            <button type="button" id="productSearchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <button type="button" id="closeSearchBtn" class="close-search-btn" aria-label="Close Search">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+    <!-- Main Content Area -->
+    <main class="page-container">
+        <div class="policy-card">
+            
+            <p class="intro-text">
+                At WebStore Inc, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and protect your information when you visit or make a purchase from our website.
+            </p>
+
+            <section class="policy-section">
+                <h2>Information We Collect</h2>
+                <p>When you shop with us, we may collect the following information:</p>
+                <ul>
+                    <li><strong>Personal details:</strong> name, email address, phone number, shipping and billing address.</li>
+                    <li><strong>Payment information:</strong> payment transactions are processed securely by trusted third-party payment providers. We do not collect, store, or have access to your full payment card details.</li>
+                    <li><strong>Account information:</strong> if you create an account to manage your orders.</li>
+                    <li><strong>Usage data:</strong> non-personal information about how visitors interact with our website, collected through analytics tools.</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2>How We Use Your Information</h2>
+                <p>We use your information for the following purposes:</p>
+                <ul>
+                    <li>Processing and fulfilling your orders.</li>
+                    <li>Communicating with you about your orders, account, or support requests.</li>
+                    <li>Sending promotional emails and newsletters, where you have opted in to receive such communications (you can unsubscribe at any time).</li>
+                    <li>Analyzing website usage to improve our services, including via tools like Google Analytics.</li>
+                    <li>Ensuring security and preventing fraudulent transactions.</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2>Third-Party Services</h2>
+                <p>We may share your information with trusted third-party providers to operate our business:</p>
+                <ul>
+                    <li>Payment processors (e.g., PayPal, credit card gateways).</li>
+                    <li>Email marketing services for newsletters and promotions.</li>
+                    <li>Analytics services (such as Google Analytics) to understand how our website is used and to improve our services.</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2>Data Security and Storage</h2>
+                <p>
+                    We implement industry-standard security measures to protect your personal and payment information. We implement industry-standard security measures to protect your personal information. Payment information is handled directly by our payment providers and is not stored on our servers. Only authorized personnel have access to your information for legitimate business purposes.
+                </p>
+                <p>
+                    We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, comply with legal obligations, and resolve disputes.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Your Rights</h2>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access, correct, or delete your personal information.</li>
+                    <li>Opt out of marketing emails at any time via the unsubscribe link.</li>
+                    <li>Request that we limit or stop processing your personal information for marketing purposes.</li>
+                </ul>
+                <p>
+                    If you are a resident of the European Union, you may exercise your rights under GDPR. For any requests, contact us at <a href="mailto:franklyn@lpteam.online" class="policy-link">franklyn@lpteam.online</a>.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Cookies and Tracking</h2>
+                <p>
+                    We use cookies and similar technologies to ensure the proper functioning of our website, analyze traffic, and improve user experience. You can control cookies through your browser settings.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Changes to This Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time. The latest version will always be posted on this page.
+                </p>
+            </section>
+
+            <section class="policy-section">
+                <h2>Contact Us</h2>
+                <p>
+                    If you have questions about this Privacy Policy or your personal information, please contact us at <a href="mailto:franklyn@lpteam.online" class="policy-link">franklyn@lpteam.online</a>.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="careers.html">Careers</a>
+                <a href="refund-returns-policy.html".html">Refund & Returns Policy</a>
+                <a href="shipping-delivery.html">Shipping & Delivery</a>
+            </div>
+
+            <div class="footer-info">
+                <h3>WebStore Inc</h3>
+                <p>13 Marlin Ct, New Castle, DE 19720 USA</p>
+                <p>+13023022233</p>
+                <p>franklyn@lpteam.online</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2000 WebStore INC | <a href="terms-and-conditions.html">Terms & Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

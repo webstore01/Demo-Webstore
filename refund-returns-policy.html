@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund & Returns Policy - WebStore Inc</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/refund-returns-policy.css">
+</head>
+<body>
+
+    <!-- Top Utility Bar -->
+    <header>
+    <div class="top-bar">
+        <span>E-MAIL: franklyn@lpteam.online</span>
+        <span>Phone: +13023022233</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img 
+                src="images/logo.png" 
+                alt="WEBSTORE INC. Logo" 
+                class="site-logo"
+            >
+        </a>
+        
+        <div class="nav-links">
+            <a href="shop.html"class="active">SHOP</a>
+            <a href="about.html"class="active">ABOUT US</a>
+            <a href="contact.html"class="active">CONTACT</a>
+        </div>
+
+        <!-- All 4 Icons Wrapped Together inside .nav-icons -->
+        <div class="nav-icons">
+            <!-- Mini Cart Container -->
+            <div class="cart-wrapper" id="cartWrapper">
+                <div class="cart-trigger" id="cartTrigger">
+                    <span class="cart-total-price" id="cartTotalPrice">$0.00</span>
+                    <div class="cart-icon-box">
+                        <i class="fas fa-shopping-basket"></i>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </div>
+                </div>
+
+                <div class="mini-cart-dropdown" id="miniCartDropdown">
+                    <div class="mini-cart-items" id="miniCartItems">
+                        <p class="empty-msg">Your cart is empty.</p>
+                    </div>
+                    
+                    <div class="mini-cart-footer" id="miniCartFooter" style="display: none;">
+                        <div class="subtotal-row">
+                            <span>SUBTOTAL:</span>
+                            <span id="miniCartSubtotal">$0.00</span>
+                        </div>
+                        <div class="mini-cart-actions">
+                            <a href="cart.html" class="btn-mini-cart">
+                                VIEW CART
+                            </a>
+                            <a href="checkout.html" class="btn-mini-cart">
+                                CHECKOUT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Nav Icons -->
+            <a href="wishlist.html" aria-label="Wishlist"><i class="far fa-heart"></i></a>
+            <a href="account.html" aria-label="Account"><i class="far fa-user"></i></a>
+
+            <!-- Search Toggle Button (Inside .nav-icons) -->
+            <button type="button" id="headerSearchToggle" class="nav-search-trigger" aria-label="Open Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+    <div id="searchOverlayBar" class="search-overlay-bar hidden">
+    <div class="search-overlay-inner">
+        <div class="search-input-wrapper">
+            <input 
+                type="text" 
+                id="productSearchInput" 
+                placeholder="Search Products" 
+                autocomplete="off"
+            />
+            <button type="button" id="productSearchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+        <button type="button" id="closeSearchBtn" class="close-search-btn" aria-label="Close Search">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+</div>
+
+    <!-- Content Area -->
+    <main class="page-wrapper">
+        <div class="policy-card">
+            
+            <p class="intro-p">
+                At WebStore Inc, we want you to be completely satisfied with your purchase. If you are not happy with your order, we offer a 30-day return guarantee in accordance with the policy outlined below.
+            </p>
+
+            <section class="policy-section">
+                <h2 class="section-title">Return Eligibility</h2>
+                <p>You may request a return within <strong>30 days</strong> of receiving your order, provided that:</p>
+                <ul class="policy-list">
+                    <li>The item is unused, unworn, and in its original condition.</li>
+                    <li>The item is returned in its original packaging.</li>
+                    <li>Proof of purchase (order number or receipt) is provided.</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2 class="section-title">Non-Returnable Items</h2>
+                <p>Certain items are not eligible for return, including:</p>
+                <ul class="policy-list">
+                    <li>Items marked as final sale.</li>
+                    <li>Gift cards or digital products.</li>
+                    <li>Items that show signs of use, damage, or alteration.</li>
+                </ul>
+            </section>
+
+            <section class="policy-section">
+                <h2 class="section-title">Return Process</h2>
+                <p>To initiate a return, please contact our support team within the 30-day return period. Once your return request is approved, you will receive instructions on how and where to send your item.</p>
+                <p>Customers are responsible for return shipping costs unless the item was received damaged or incorrect.</p>
+            </section>
+
+            <section class="policy-section">
+                <h2 class="section-title">Refunds</h2>
+                <p>After we receive and inspect your returned item, we will notify you of the approval or rejection of your refund.</p>
+                <p>Approved refunds will be processed to the original payment method within <strong>7–10 business days</strong>. Please note that processing times may vary depending on your payment provider.</p>
+            </section>
+
+            <section class="policy-section">
+                <h2 class="section-title">Exchanges</h2>
+                <p>If you wish to exchange an item for a different size or variant, please contact us. Exchanges are subject to product availability.</p>
+            </section>
+
+            <section class="policy-section">
+                <h2 class="section-title">Damaged or Incorrect Items</h2>
+                <p>If you receive a damaged, defective, or incorrect item, please contact us as soon as possible. We will work with you to resolve the issue promptly, including offering a replacement or refund where applicable.</p>
+            </section>
+
+            <section class="policy-section">
+                <h2 class="section-title">Contact Us</h2>
+                <p>If you have any questions about our Refund & Returns Policy, please contact us at <a href="mailto:franklyn@lpteam.online" class="policy-link">franklyn@lpteam.online</a>.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Scroll To Top Floating Button -->
+    <button id="scrollToTop" class="scroll-top-btn" title="Back to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="careers.html">Careers</a>
+                <a href="refund-returns-policy.html">Refund & Returns Policy</a>
+                <a href="shipping-delivery.html">Shipping & Delivery</a>
+            </div>
+            <div class="footer-info">
+                <h3>WebStore Inc</h3>
+                <p>13 Marlin Ct, New Castle, DE 19720 USA</p>
+                <p>+13023022233</p>
+                <p>franklyn@lpteam.online</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2000 WebStore INC | <a href="terms-and-conditions.html">Terms & Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/wishlist.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

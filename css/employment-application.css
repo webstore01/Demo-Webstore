@@ -1,0 +1,1454 @@
+:root {
+
+    --amazon-navy: #131921;
+
+    --amazon-blue: #232f3e;
+
+    --amazon-orange: #ff9900;
+
+    --amazon-orange-dark: #e68a00;
+
+    --page-bg: #f3f6f8;
+
+    --input-bg: #ffffff;
+
+    --input-border: #d5d9d9;
+
+    --text: #131921;
+
+    --muted: #879196;
+
+    --white: #ffffff;
+
+    --danger: #e60000;
+
+}
+
+
+/* ============================================================
+   RESET
+============================================================ */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--page-bg);
+
+    color: var(--text);
+
+}
+
+
+/* ============================================================
+   MAIN PAGE
+============================================================ */
+
+.application-page {
+
+    width: 1000%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 10px 32px 70px;
+
+    background: var(--page-bg);
+
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.application-header {
+
+    min-height: 100px;
+
+    background: #232F3E;
+
+    border-radius: 14px 14px 0 0;
+
+    padding: 20px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+}
+
+
+/* ============================================================
+   BRAND
+============================================================ */
+
+.brand-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 170px;
+
+}
+
+
+.application-logo {
+
+    width: 150px;
+
+    height: 62px;
+
+    object-fit: contain;
+
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1;
+
+}
+
+
+.brand-name {
+
+    color: var(--white);
+
+    font-size: 12px;
+
+    font-weight: 400;
+
+    letter-spacing: 3px;
+
+}
+
+
+.brand-subtitle {
+
+    color: var(--amazon-orange);
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    margin-top: 5px;
+
+}
+
+
+/* ============================================================
+   HEADER TITLE
+============================================================ */
+
+.application-header h1 {
+
+    flex: 1;
+
+    color: white;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+}
+
+
+/* ============================================================
+   FORM SECTION
+============================================================ */
+
+.form-section {
+
+    margin-top: 30px;
+
+}
+
+
+/* ============================================================
+   SECTION HEADING
+============================================================ */
+
+.section-heading {
+
+    min-height: 60px;
+
+    padding: 12px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: var(--amazon-blue);
+
+    color: white;
+
+    border-radius: 12px;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    box-shadow:
+        0 5px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* ============================================================
+   SECTION CONTENT
+============================================================ */
+
+.section-content {
+
+    padding: 15px 20px 10px;
+
+    border-top: 1px solid #b8b8b8;
+
+}
+
+
+/* ============================================================
+   FORM ROW
+============================================================ */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 160px 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    align-items: start;
+
+}
+
+
+/* ============================================================
+   LABEL
+============================================================ */
+
+.form-label {
+
+    padding-top: 7px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #111111;
+
+}
+
+
+.required {
+
+    color: var(--danger);
+
+    margin-left: 7px;
+
+}
+
+
+/* ============================================================
+   FIELD AREA
+============================================================ */
+
+.field-area {
+
+    width: 100%;
+
+    max-width: 550px;
+
+}
+
+
+/* ============================================================
+   INPUTS
+============================================================ */
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    background: var(--input-bg);
+
+    border: 1px solid var(--input-border);
+
+    border-radius: 11px;
+
+    outline: none;
+
+    color: #111111;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+input,
+select {
+
+    height: 43px;
+
+    padding: 7px 12px;
+
+}
+
+
+textarea {
+
+    padding: 12px;
+
+    resize: vertical;
+
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: var(--amazon-orange);
+
+    box-shadow:
+        0 0 0 3px rgba(255,153,0,0.16);
+
+}
+
+
+/* ============================================================
+   PLACEHOLDER
+============================================================ */
+
+input::placeholder {
+
+    color: #8b8b8b;
+
+    font-style: italic;
+
+}
+
+
+/* ============================================================
+   FIELD HELP
+============================================================ */
+
+.field-help {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #879196;
+
+    font-size: 14px;
+
+}
+
+
+/* ============================================================
+   NAME
+============================================================ */
+
+.name-fields {
+
+    display: grid;
+
+    grid-template-columns: 175px 240px;
+
+    gap: 14px;
+
+}
+
+
+.small-field {
+
+    min-width: 0;
+
+}
+
+
+.full-field {
+
+    width: 100%;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ============================================================
+   ADDRESS
+============================================================ */
+
+.address-fields {
+
+    max-width: 560px;
+
+}
+
+
+.two-column-fields {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* ============================================================
+   PHONE
+============================================================ */
+
+.phone-fields {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+}
+
+
+.phone-area {
+
+    width: 90px;
+
+}
+
+
+.phone-number {
+
+    width: 150px;
+
+}
+
+
+.phone-dash {
+
+    padding-top: 8px;
+
+    font-size: 20px;
+
+}
+
+
+/* ============================================================
+   CELL PHONE
+============================================================ */
+
+.form-row:nth-of-type(4) .field-area input {
+
+    max-width: 425px;
+
+}
+
+
+/* ============================================================
+   EMAIL
+============================================================ */
+
+.form-row:nth-of-type(5) .field-area input {
+
+    max-width: 425px;
+
+}
+
+
+/* ============================================================
+   DATE
+============================================================ */
+
+.date-fields {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+}
+
+
+.date-field {
+
+    width: 105px;
+
+}
+
+
+.date-field select {
+
+    cursor: pointer;
+
+}
+
+
+.day-field {
+
+    width: 70px;
+
+}
+
+
+.year-field {
+
+    width: 105px;
+
+}
+
+
+/* ============================================================
+   CITIZEN
+============================================================ */
+
+.citizen-row {
+
+    margin-top: 10px;
+
+}
+
+
+.citizen-label {
+
+    line-height: 1.15;
+
+}
+
+
+.choice-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.checkbox-choice,
+.radio-choice,
+.check-option {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+}
+
+
+.checkbox-choice input,
+.radio-choice input,
+.check-option input {
+
+    width: 26px;
+
+    height: 26px;
+
+    margin: 0;
+
+    accent-color: var(--amazon-orange);
+
+    cursor: pointer;
+
+}
+
+
+/* ============================================================
+   EMPLOYMENT TOP
+============================================================ */
+
+.employment-top-row {
+
+    display: grid;
+
+    grid-template-columns: 210px 1fr;
+
+    gap: 30px;
+
+    padding-top: 3px;
+
+}
+
+
+.employment-top-row label,
+.salary-row label,
+.question-block > label,
+.education-block label,
+.textarea-field label,
+.current-employment label {
+
+    display: block;
+
+    color: #111111;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.employment-position select {
+
+    width: 225px;
+
+}
+
+
+.start-date-area {
+
+    min-width: 0;
+
+}
+
+
+.date-dash {
+
+    padding-top: 8px;
+
+    font-size: 18px;
+
+}
+
+
+/* ============================================================
+   SALARY
+============================================================ */
+
+.salary-row {
+
+    margin-top: 30px;
+
+}
+
+
+.salary-row input {
+
+    width: 175px;
+
+}
+
+
+/* ============================================================
+   QUESTIONS
+============================================================ */
+
+.questions-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    margin-top: 34px;
+
+}
+
+
+.question-block {
+
+    min-width: 0;
+
+}
+
+
+.question-block > label {
+
+    min-height: 20px;
+
+}
+
+
+.question-block .radio-choice {
+
+    margin-top: 10px;
+
+}
+
+
+/* ============================================================
+   EDUCATION
+============================================================ */
+
+.education-content {
+
+    padding-top: 10px;
+
+}
+
+
+.education-block {
+
+    display: grid;
+
+    grid-template-columns: 1fr 260px;
+
+    gap: 35px;
+
+    padding: 10px 0 40px;
+
+    margin: 0 0 10px;
+
+    border-bottom: 1px solid #999;
+
+}
+
+
+.education-block:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.education-main {
+
+    min-width: 0;
+
+}
+
+
+.education-main > input {
+
+    max-width: 550px;
+
+}
+
+
+.education-side {
+
+    padding-top: 0;
+
+}
+
+
+.education-side > input {
+
+    width: 115px;
+
+}
+
+
+.graduated-label {
+
+    margin-top: 28px;
+
+}
+
+
+.check-option {
+
+    margin-top: 12px;
+
+}
+
+
+.check-option input {
+
+    width: 26px;
+
+    height: 26px;
+
+}
+
+
+/* ============================================================
+   DEGREE
+============================================================ */
+
+.degree-row {
+
+    display: grid;
+
+    grid-template-columns: 170px 300px;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-top: 75px;
+
+}
+
+
+.degree-row label {
+
+    margin: 0;
+
+    line-height: 1.15;
+
+}
+
+
+.degree-row input {
+
+    width: 300px;
+
+}
+
+
+/* ============================================================
+   TEXT AREAS
+============================================================ */
+
+.textarea-field {
+
+    margin-bottom: 25px;
+
+}
+
+
+.textarea-field textarea {
+
+    width: 85%;
+
+    min-height: 160px;
+
+    display: block;
+
+}
+
+
+.textarea-field .field-help {
+
+    margin-top: 4px;
+
+}
+
+
+/* ============================================================
+   CURRENT EMPLOYMENT
+============================================================ */
+
+.current-employment {
+
+    padding-left: 12px;
+
+    padding-right: 12px;
+
+}
+
+
+.current-employer {
+
+    margin-bottom: 30px;
+
+}
+
+
+.current-employer input {
+
+    width: 490px;
+
+}
+
+
+.current-position {
+
+    margin-bottom: 30px;
+
+}
+
+
+.current-position input {
+
+    width: 365px;
+
+}
+
+
+.salary-reason-row {
+
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 32px;
+
+}
+
+
+.salary-reason-row input {
+
+    width: 100%;
+
+}
+
+
+.current-date-contact-row {
+
+    display: grid;
+
+    grid-template-columns: 390px 1fr;
+
+    gap: 25px;
+
+    align-items: start;
+
+    margin-bottom: 35px;
+
+}
+
+
+.current-start-date .date-fields {
+
+    gap: 10px;
+
+}
+
+
+.contact-question {
+
+    padding-left: 10px;
+
+}
+
+
+.contact-question .radio-choice {
+
+    margin-top: 12px;
+
+}
+
+
+/* ============================================================
+   CURRENT PHONE
+============================================================ */
+
+.current-phone {
+
+    padding-bottom: 20px;
+
+}
+
+
+.current-phone .phone-area {
+
+    width: 90px;
+
+}
+
+
+.current-phone .phone-number {
+
+    width: 150px;
+
+}
+
+
+/* ============================================================
+   SEND SECTION
+============================================================ */
+
+.send-section {
+
+    margin-top: 30px;
+
+}
+
+
+.send-content {
+
+    border-top: 1px solid #b8b8b8;
+
+    padding: 25px 20px 40px;
+
+    text-align: center;
+
+}
+
+
+.send-content p {
+
+    color: #555;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ============================================================
+   SUBMIT BUTTON
+============================================================ */
+
+.submit-button {
+
+    border: none;
+
+    background: var(--amazon-orange);
+
+    color: var(--amazon-navy);
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    padding: 14px 30px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.submit-button:hover {
+
+    background: var(--amazon-orange-dark);
+
+    transform: translateY(-1px);
+
+}
+
+
+.submit-button i {
+
+    margin-right: 8px;
+
+}
+
+
+/* ============================================================
+   SUCCESS MESSAGE
+============================================================ */
+
+.success-message {
+
+    display: none;
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(450px, calc(100% - 40px));
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,0.35);
+
+    z-index: 1000;
+
+}
+
+
+.success-message.show {
+
+    display: block;
+
+}
+
+
+.success-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: var(--amazon-orange);
+
+    color: var(--amazon-navy);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    font-size: 28px;
+
+}
+
+
+.success-message h2 {
+
+    color: var(--amazon-navy);
+
+    margin-bottom: 10px;
+
+}
+
+
+.success-message p {
+
+    color: #555;
+
+    line-height: 1.5;
+
+    margin-bottom: 22px;
+
+}
+
+
+.success-message button {
+
+    border: none;
+
+    background: var(--amazon-orange);
+
+    color: var(--amazon-navy);
+
+    font-weight: 700;
+
+    padding: 10px 25px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+}
+
+
+/* ============================================================
+   INVALID INPUT
+============================================================ */
+
+.input-error {
+
+    border-color: #d00;
+
+    box-shadow:
+        0 0 0 3px rgba(220,0,0,0.1);
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 850px) {
+
+    .application-page {
+
+        padding: 10px 15px 50px;
+
+    }
+
+
+    .application-header {
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .application-header h1 {
+
+        font-size: 30px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+    }
+
+
+    .field-area {
+
+        max-width: 100%;
+
+    }
+
+
+    .name-fields {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .employment-top-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .employment-position select {
+
+        width: 100%;
+
+    }
+
+
+    .questions-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+    }
+
+
+    .education-block {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .education-side {
+
+        padding-top: 10px;
+
+    }
+
+
+    .degree-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-top: 40px;
+
+    }
+
+
+    .degree-row input {
+
+        width: 100%;
+
+    }
+
+
+    .textarea-field textarea {
+
+        width: 100%;
+
+    }
+
+
+    .salary-reason-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .current-date-contact-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .application-page {
+
+        padding: 0 8px 30px;
+
+    }
+
+
+    .application-header {
+
+        border-radius: 0;
+
+    }
+
+
+    .application-header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .section-heading {
+
+        font-size: 23px;
+
+        padding: 15px 20px;
+
+    }
+
+
+    .name-fields,
+    .two-column-fields {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .phone-fields {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .date-fields {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .education-block {
+
+        gap: 20px;
+
+    }
+
+}
+
+
+/* ============================================================
+   PRINT
+============================================================ */
+
+@media print {
+
+    body {
+
+        background: white;
+
+    }
+
+
+    .application-page {
+
+        max-width: none;
+
+        padding: 0;
+
+        background: white;
+
+    }
+
+
+    .application-header {
+
+        break-inside: avoid;
+
+        page-break-inside: avoid;
+
+    }
+
+
+    .section-heading {
+
+        break-inside: avoid;
+
+        page-break-inside: avoid;
+
+        box-shadow: none;
+
+    }
+
+
+    .form-section {
+
+        break-inside: auto;
+
+        page-break-inside: auto;
+
+    }
+
+
+    .submit-button,
+    .success-message {
+
+        display: none;
+
+    }
+
+}

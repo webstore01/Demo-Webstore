@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout - WebStore Inc</title>
+
+
+    <!-- Existing Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+
+
+    <!-- Main Website CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- Checkout CSS -->
+    <link
+        rel="stylesheet"
+        href="css/checkout.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+    <div class="top-bar">
+
+        <span>
+            E-MAIL: franklyn@lpteam.online
+        </span>
+
+        <span>
+            Phone: +13023022233
+        </span>
+
+    </div>
+
+
+    <nav class="navbar">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="logo-link"
+        >
+
+            <img
+                src="images/logo.png"
+                alt="WEBSTORE INC. Logo"
+                class="site-logo"
+            >
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="nav-links">
+
+            <a
+                href="shop.html"
+                class="active"
+            >
+                SHOP
+            </a>
+
+            <a
+                href="about.html"
+                class="active"
+            >
+                ABOUT US
+            </a>
+
+            <a
+                href="contact.html"
+                class="active"
+            >
+                CONTACT
+            </a>
+
+        </div>
+
+
+        <!-- NAV ICONS -->
+
+        <div class="nav-icons">
+
+
+            <!-- CART -->
+
+            <div
+                class="cart-wrapper"
+                id="cartWrapper"
+            >
+
+                <div class="cart-trigger">
+
+                    <span
+                        class="cart-total-price"
+                        id="cartTotalPrice"
+                    >
+                        $0.00
+                    </span>
+
+
+                    <div class="cart-icon-box">
+
+                        <i class="fas fa-shopping-basket"></i>
+
+                        <span
+                            class="cart-badge"
+                            id="cartBadge"
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MINI CART -->
+
+                <div
+                    class="mini-cart-dropdown"
+                    id="miniCartDropdown"
+                >
+
+                    <div
+                        class="mini-cart-items"
+                        id="miniCartItems"
+                    >
+
+                        <p class="empty-msg">
+                            Your cart is empty.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="mini-cart-footer"
+                        id="miniCartFooter"
+                        style="display:none;"
+                    >
+
+                        <div class="subtotal-row">
+
+                            <span>
+                                SUBTOTAL:
+                            </span>
+
+                            <span id="miniCartSubtotal">
+                                $0.00
+                            </span>
+
+                        </div>
+
+
+                        <div class="mini-cart-actions">
+
+                            <a
+                                href="cart.html"
+                                class="btn-mini-cart"
+                            >
+                                VIEW CART
+                            </a>
+
+                            <a
+                                href="checkout.html"
+                                class="btn-mini-cart"
+                            >
+                                CHECKOUT
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- WISHLIST -->
+
+            <a
+                href="wishlist.html"
+                aria-label="Wishlist"
+            >
+
+                <i class="far fa-heart"></i>
+
+            </a>
+
+
+            <!-- ACCOUNT -->
+
+            <a
+                href="account.html"
+                aria-label="Account"
+            >
+
+                <i class="far fa-user"></i>
+
+            </a>
+
+
+            <!-- SEARCH -->
+
+            <button
+                type="button"
+                id="headerSearchToggle"
+                class="nav-search-trigger"
+                aria-label="Open Search"
+            >
+
+                <i class="fas fa-search"></i>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     SEARCH
+========================================================= -->
+
+<div
+    id="searchOverlayBar"
+    class="search-overlay-bar hidden"
+>
+
+    <div class="search-overlay-inner">
+
+
+        <div class="search-input-wrapper">
+
+            <input
+                type="text"
+                id="productSearchInput"
+                placeholder="Search Products"
+                autocomplete="off"
+            >
+
+
+            <button
+                type="button"
+                id="productSearchBtn"
+                aria-label="Search"
+            >
+
+                <i class="fas fa-search"></i>
+
+            </button>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="closeSearchBtn"
+            class="close-search-btn"
+            aria-label="Close Search"
+        >
+
+            <i class="fas fa-times"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     CHECKOUT
+========================================================= -->
+
+<!-- =========================================================
+     CHECKOUT BODY
+     HEADER AND FOOTER ARE NOT MODIFIED
+========================================================= -->
+
+<main class="checkout-wrapper">
+
+    <div class="checkout-container">
+
+        <!-- =================================================
+             LEFT SIDE
+        ================================================== -->
+
+        <div class="checkout-left">
+
+            <section class="form-section">
+
+                <!-- =================================================
+                     CONTACT INFORMATION
+                ================================================== -->
+
+                <div class="section-header">
+
+                    <h2>
+                        Contact information
+                    </h2>
+
+                    <a
+                        href="#"
+                        class="login-link"
+                    >
+                        Log in
+                    </a>
+
+                </div>
+
+
+                <div class="input-field">
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder=" "
+                        autocomplete="email"
+                    >
+
+                    <label for="email">
+                        Email address
+                    </label>
+
+                </div>
+
+
+                <p class="sub-text">
+                    You are currently checking out as a guest.
+                </p>
+
+
+                <label class="checkbox-container">
+
+                    <input
+                        type="checkbox"
+                        id="create-account"
+                    >
+
+                    <span class="checkmark"></span>
+
+                    Create an account with WebStore Inc
+
+                </label>
+
+
+                <!-- =================================================
+                     SHIPPING ADDRESS
+                ================================================== -->
+
+                <h2>
+                    Shipping address
+                </h2>
+
+
+                <!-- COUNTRY -->
+
+                <div class="input-field select-field">
+
+                    <select
+                        id="country"
+                        name="country"
+                    >
+
+                        <option
+                            value="US"
+                            selected
+                        >
+                            United States (US)
+                        </option>
+
+                        <option value="CA">
+                            Canada
+                        </option>
+
+                    </select>
+
+                    <label for="country">
+                        Country/Region
+                    </label>
+
+                    <i
+                        class="fa-solid fa-chevron-down select-icon"
+                    ></i>
+
+                </div>
+
+
+                <!-- FIRST + LAST NAME -->
+
+                <div class="grid-2">
+
+                    <div class="input-field">
+
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            placeholder=" "
+                            autocomplete="given-name"
+                        >
+
+                        <label for="firstName">
+                            First name
+                        </label>
+
+                    </div>
+
+
+                    <div class="input-field">
+
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            placeholder=" "
+                            autocomplete="family-name"
+                        >
+
+                        <label for="lastName">
+                            Last name
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMPANY -->
+
+                <div class="input-field">
+
+                    <input
+                        type="text"
+                        id="company"
+                        placeholder=" "
+                        autocomplete="organization"
+                    >
+
+                    <label for="company">
+                        Company (optional)
+                    </label>
+
+                </div>
+
+
+                <!-- ADDRESS -->
+
+                <div class="input-field">
+
+                    <input
+                        type="text"
+                        id="address"
+                        name="address"
+                        placeholder=" "
+                        autocomplete="street-address"
+                    >
+
+                    <label for="address">
+                        Address
+                    </label>
+
+                </div>
+
+
+                <!-- APARTMENT -->
+
+                <a
+                    href="#"
+                    class="add-suite-link"
+                    id="addSuiteLink"
+                >
+                    + Add apartment, suite, etc.
+                </a>
+
+
+                <div
+                    class="input-field hidden"
+                    id="suiteField"
+                >
+
+                    <input
+                        type="text"
+                        id="suite"
+                        placeholder=" "
+                        autocomplete="address-line2"
+                    >
+
+                    <label for="suite">
+                        Apartment, suite, etc.
+                    </label>
+
+                </div>
+
+
+                <!-- CITY + STATE -->
+
+                <div class="grid-2">
+
+                    <div class="input-field">
+
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            placeholder=" "
+                            autocomplete="address-level2"
+                        >
+
+                        <label for="city">
+                            City
+                        </label>
+
+                    </div>
+
+
+                    <div class="input-field">
+
+                        <input
+                            type="text"
+                            id="state"
+                            name="state"
+                            placeholder=" "
+                            autocomplete="address-level1"
+                        >
+
+                        <label for="state">
+                            State
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ZIP + PHONE -->
+
+                <div class="grid-2">
+
+                    <div class="input-field">
+
+                        <input
+                            type="text"
+                            id="zipCode"
+                            name="zip"
+                            placeholder=" "
+                            autocomplete="postal-code"
+                        >
+
+                        <label for="zipCode">
+                            ZIP Code
+                        </label>
+
+                    </div>
+
+
+                    <div class="input-field">
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder=" "
+                            autocomplete="tel"
+                        >
+
+                        <label for="phone">
+                            Phone
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SAME BILLING ADDRESS -->
+
+                <label class="checkbox-container">
+
+                    <input
+                        type="checkbox"
+                        id="same-address"
+                        checked
+                    >
+
+                    <span class="checkmark"></span>
+
+                    Use same address for billing
+
+                </label>
+
+
+                <!-- =================================================
+                     SHIPPING OPTIONS
+                ================================================== -->
+
+                <h2>
+                    Shipping options
+                </h2>
+
+
+                <div
+                    id="shipping-options-message"
+                    class="shipping-message"
+                >
+                    Enter a shipping address to view shipping options.
+                </div>
+
+                <!-- =================================================
+                     SHIPPING WARNING
+
+                     PHONE IS NOT REQUIRED FOR THIS WARNING
+                ================================================== -->
+
+                <div
+                    id="shipping-warning"
+                    class="warning-box hidden"
+                >
+
+                    <i
+                        class="fa-solid fa-circle-exclamation warning-icon"
+                    ></i>
+
+                    <span>
+                        No shipping options are available for this address.
+                        Please verify the address is correct or try a different address.
+                    </span>
+
+                </div>
+
+
+                <!-- =================================================
+                     PAYMENT OPTIONS
+                ================================================== -->
+
+                <h2>
+                    Payment options
+                </h2>
+
+
+                <div class="payment-methods">
+
+                    <!-- PAYPAL -->
+
+                    <label class="payment-option selected">
+
+                        <div class="radio-title">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="paypal"
+                                checked
+                            >
+
+                            <span>
+                                PayPal
+                            </span>
+
+                        </div>
+
+
+                        <img
+                            src="images/paypal-logo.png"
+                            alt="PayPal"
+                            class="paypal-img"
+                        >
+
+                    </label>
+
+
+                    <!-- CREDIT / DEBIT CARD -->
+
+                    <label class="payment-option">
+
+                        <div class="radio-title">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="card"
+                            >
+
+                            <span>
+                                Credit/Debit Cards
+                            </span>
+
+                        </div>
+
+                    </label>
+
+
+                    <!-- =================================================
+                         CREDIT CARD DETAILS
+
+                         Hidden until Credit/Debit Cards is selected
+                    ================================================== -->
+
+                    <div
+                        id="cardDetails"
+                        class="card-details hidden"
+                    >
+
+                        <div class="card-field">
+
+                            <label for="cardholderName">
+                                Cardholder name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cardholderName"
+                                autocomplete="cc-name"
+                            >
+
+                        </div>
+
+
+                        <div class="card-field">
+
+                            <label for="cardNumber">
+                                Card number
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cardNumber"
+                                inputmode="numeric"
+                                autocomplete="cc-number"
+                            >
+
+                        </div>
+
+
+                        <div class="card-field">
+
+                            <label for="expiryDate">
+                                Expiration date
+                            </label>
+
+                            <input
+                                type="text"
+                                id="expiryDate"
+                                placeholder="MM / YY"
+                                autocomplete="cc-exp"
+                            >
+
+                        </div>
+
+
+                        <div class="card-field">
+
+                            <label for="securityCode">
+                                Security code
+                            </label>
+
+                            <div class="security-input">
+
+                                <input
+                                    type="password"
+                                    id="securityCode"
+                                    inputmode="numeric"
+                                    autocomplete="cc-csc"
+                                >
+
+                                <span class="security-icon">
+                                    <i class="fa-regular fa-credit-card"></i>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAYMENT MESSAGE -->
+
+                <p
+                    class="payment-message"
+                    id="paymentMessage"
+                >
+                    Please complete your billing information before entering payment details.
+                </p>
+
+
+                <!-- =================================================
+                     ADD NOTE
+                ================================================== -->
+
+                <label class="checkbox-container">
+
+                    <input
+                        type="checkbox"
+                        id="order-note"
+                    >
+
+                    <span class="checkmark"></span>
+
+                    Add a note to your order
+
+                </label>
+
+
+                <div
+                    id="order-note-box"
+                    class="order-note-box hidden"
+                >
+
+                    <textarea
+                        id="order-note-text"
+                        rows="4"
+                        placeholder="Notes about your order, e.g. special notes for delivery."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- =================================================
+                     TERMS
+                ================================================== -->
+
+                <p class="terms-text">
+
+                    By proceeding with your purchase you agree to our
+
+                    <a href="terms-and-conditions.html">
+                        Terms and Conditions
+                    </a>
+
+                    and
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                </p>
+
+
+                <!-- =================================================
+                     PLACE ORDER
+                ================================================== -->
+
+                <button
+                    type="button"
+                    class="btn-place-order"
+                    id="placeOrderBtn"
+                >
+                    Place Order
+                </button>
+
+            </section>
+
+        </div>
+
+
+        <!-- =================================================
+             RIGHT SIDE — ORDER SUMMARY
+        ================================================== -->
+
+        <aside class="checkout-right">
+
+            <div class="order-summary-card">
+
+                <h2>
+                    Order summary
+                </h2>
+
+
+                <!-- DYNAMIC PRODUCTS -->
+
+                <div
+                    id="checkoutProducts"
+                    class="checkout-products"
+                >
+                </div>
+
+
+                <!-- COUPON -->
+
+                <div class="coupon-accordion">
+
+                    <button
+                        type="button"
+                        class="coupon-toggle"
+                        id="couponToggle"
+                        onclick="toggleCoupon()"
+                    >
+
+                        <span>
+                            Add coupons
+                        </span>
+
+                        <i
+                            class="fa-solid fa-chevron-down"
+                            id="couponArrow"
+                        ></i>
+
+                    </button>
+
+
+                    <div
+                        class="coupon-content"
+                        id="couponContent"
+                    >
+
+                        <div class="coupon-input-group">
+
+                            <input
+                                type="text"
+                                id="couponInput"
+                                placeholder="Enter code"
+                            >
+
+                            <button
+                                type="button"
+                                class="btn-apply"
+                                onclick="applyCoupon()"
+                            >
+                                Apply
+                            </button>
+
+                        </div>
+
+                        <!-- COUPON ERROR MESSAGE -->
+        <div
+            id="couponError"
+            class="coupon-error"
+        >
+            <i class="fa-solid fa-circle-exclamation"></i>
+
+            <span id="couponErrorText"></span>
+        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUBTOTAL -->
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <span
+                        class="amount"
+                        id="checkoutSubtotal"
+                    >
+                        $0.00
+                    </span>
+
+                </div>
+
+
+                <!-- DELIVERY -->
+
+                <div class="summary-row">
+
+                    <span>
+                        Delivery
+                    </span>
+
+                    <span
+                        class="delivery-status"
+                        id="checkoutDelivery"
+                    >
+                        Enter address to calculate
+                    </span>
+
+                </div>
+
+
+                <!-- TOTAL -->
+
+                <div class="summary-row total-row">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <span
+                        class="amount"
+                        id="checkoutTotal"
+                    >
+                        $0.00
+                    </span>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================================
+     SCROLL TOP
+========================================================= -->
+
+<button
+    id="scrollToTop"
+    class="scroll-top-btn"
+    title="Back to top"
+>
+
+    <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+    >
+
+        <line
+            x1="12"
+            y1="19"
+            x2="12"
+            y2="5"
+        ></line>
+
+        <polyline
+            points="5 12 12 5 19 12"
+        ></polyline>
+
+    </svg>
+
+</button>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+
+    <div class="footer-container">
+
+
+        <div class="footer-links">
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+            <a href="careers.html">
+                Careers
+            </a>
+
+            <a href="refund-returns-policy.html">
+                Refund & Returns Policy
+            </a>
+
+            <a href="shipping-delivery.html">
+                Shipping & Delivery
+            </a>
+
+        </div>
+
+
+        <div class="footer-info">
+
+            <h3>
+                WebStore Inc
+            </h3>
+
+            <p>
+                13 Marlin Ct, New Castle, DE 19720 USA
+            </p>
+
+            <p>
+                +13023022233
+            </p>
+
+            <p>
+                franklyn@lpteam.online
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+
+            © 2000 WebStore INC |
+
+            <a href="terms-and-conditions.html">
+                Terms & Conditions
+            </a>
+
+            |
+
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+
+        </p>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="js/script.js"></script>
+
+<script src="js/contact.js"></script>
+
+<script src="js/wishlist.js"></script>
+
+<script src="js/cart.js"></script>
+
+<script src="js/checkout.js"></script>
+
+
+</body>
+</html>
